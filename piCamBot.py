@@ -406,11 +406,6 @@ class piCamBot:
 
             (header, type_names, watch_path, filename) = event
 
-            # only watch for created and renamed files
-            matched_types = ['IN_CLOSE_WRITE', 'IN_MOVED_TO']
-            if not any(type in type_names for type in matched_types):
-                continue
-
             # check for image
             if sys.version_info[0] == 3: # yay! python 2 vs 3 unicode fuckup
                 watch_path = watch_path.decode()
