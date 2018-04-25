@@ -417,7 +417,8 @@ class piCamBot:
                 filename = filename.decode()
             filepath = ('%s/%s' % (watch_path, filename))
 
-            if not filename.endswith('.jpg'):
+            if not filename.endswith('.jpg')\
+                    and not filename.endswith('.gif'):
                 self.logger.info('New non-image file: "%s" - ignored' % filepath)
                 continue
 
