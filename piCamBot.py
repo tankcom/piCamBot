@@ -209,7 +209,7 @@ class piCamBot:
             self.commandKill(message)
         elif cmd == '/status':
             self.commandStatus(message)
-        elif cmd == '/capture':
+        elif cmd == '/pic':
             # if motion software is running we have to stop and restart it for capturing images
             # no we dont, only losers use Raspistill
             #stopStart = self.isMotionRunning()
@@ -218,6 +218,9 @@ class piCamBot:
             self.commandCapture(message)
             #if stopStart:
             #    self.commandArm(message)
+        elif cmd == '/vid':
+            self.commandCaptureVid(message)
+
         else:
             self.logger.warn('Unknown command: "%s"' % message.text)
 
@@ -382,6 +385,37 @@ class piCamBot:
             return
         
         message.reply_photo(photo=open(capture_file, 'rb'))
+        if self.config['general']['delete_images']:
+            os.remove(capture_file)
+
+    def commandCaptureVid(self, message):
+        message.reply_text('Capture of Video in progress, please wait...')
+
+        if self.config['buzzer']['enable']:
+            buzzer_sequence = self.config['buzzer']['seq_capture']
+            if len(buzzer_sequence) > 0:
+                self.playSequence(buzzer_sequence)
+
+        capture_file = self.config['capturevid']['file'] # geht dat so?
+        if sys.version_info[0] == 2:  # yay! python 2 vs 3 unicode fuckup
+            capture_file = capture_file.encode('utf-8')
+        if os.path.exists(capture_file):
+            os.remove(capture_file)
+
+        args = shlex.split(self.config['capturevid']['cmd'])
+        try:
+            subprocess.call(args)
+        except Exception as e:
+            self.logger.warn(str(e))
+            self.logger.warn(traceback.format_exc())
+            message.reply_text('Error: Capture failed: %s' % str(e))
+            return
+
+        if not os.path.exists(capture_file):
+            message.reply_text('Error: Capture file not found: "%s"' % capture_file)
+            return
+
+        message.reply_Video(photo=open(capture_file, 'rb'))
         if self.config['general']['delete_images']:
             os.remove(capture_file)
 
