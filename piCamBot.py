@@ -415,7 +415,7 @@ class piCamBot:
             message.reply_text('Error: Capture file not found: "%s"' % capture_file)
             return
 
-        message.reply_Video(photo=open(capture_file, 'rb'))
+        message.reply_video(photo=open(capture_file, 'rb'))
         if self.config['general']['delete_images']:
             os.remove(capture_file)
 
