@@ -411,7 +411,9 @@ class piCamBot:
         if os.path.exists(capture_file):
             os.remove(capture_file)
 
-        args = shlex.split(self.config['capturevid']['cmd'].format(vid_len=vid_len))
+        capture_cmd = self.config['capturevid']['cmd'].format(vid_len=vid_len)
+        print(capture_cmd)
+        args = shlex.split(capture_cmd)
         try:
             subprocess.call(args)
         except Exception as e:
