@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007137af-dfce-4299-8912-06e5ee02ceb4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/config_default.json" beforeDir="false" afterPath="$PROJECT_DIR$/config_default.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/piCamBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/piCamBot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="416" lean-forward="true" selection-start-line="416" selection-end-line="416" />
+            <state relative-caret-position="338">
+              <caret line="413" column="82" lean-forward="true" selection-start-line="413" selection-start-column="82" selection-end-line="413" selection-end-column="82" />
             </state>
           </provider>
         </entry>
@@ -25,8 +26,8 @@
       <file leaf-file-name="config_default.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config_default.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+            <state relative-caret-position="270">
+              <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -161,15 +162,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config_default.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="75" lean-forward="true" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="270">
+          <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="416" lean-forward="true" selection-start-line="416" selection-end-line="416" />
+        <state relative-caret-position="338">
+          <caret line="413" column="82" lean-forward="true" selection-start-line="413" selection-start-column="82" selection-end-line="413" selection-end-column="82" />
         </state>
       </provider>
     </entry>

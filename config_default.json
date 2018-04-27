@@ -56,7 +56,7 @@
         "kill_name": "motion"
     },
 
-    "//": "settings for capturing gifs",
+    "//": "settings for capturing Pictures",
     "capture": {
         "//": "command for creating a snapshot",
 	"//": "note: the resulting image should be located outside the usual image_dir,",
@@ -67,15 +67,15 @@
         "file": "/tmp/piCamBot.jpg"
     },
 
-  "//": "settings for capturing gifs",
+  "//": "settings for capturing Videos",
     "capturevid": {
         "//": "command for creating a snapshot",
 	"//": "note: the resulting image should be located outside the usual image_dir,",
 	"//": "      otherwise it gets ignored while motion tracking is disabled",
-        "cmd": ""ffmpeg -i /dev/video3 -t 3 /tmp/piCamBot.avi"",
+        "cmd": ""ffmpeg -i /dev/video3 -t {vid_len} -vcodec mpeg4 /tmp/piCamBot.mp4"",
 
         "//": "where to find the image after capturing",
-        "file": "/tmp/piCamBot.avi"
+        "file": "/tmp/piCamBot.mp4"
     },
 
     "//": "buzzer settings for acoustic alarms, e.g. for piezo buzzers",

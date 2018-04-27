@@ -218,8 +218,8 @@ class piCamBot:
             self.commandCapture(message)
             #if stopStart:
             #    self.commandArm(message)
-        elif cmd == '/vid':
-            self.commandCaptureVid(message)
+        elif cmd.startswith('/vid'):
+            self.commandCaptureVid(message, cmd)
 
         else:
             self.logger.warn('Unknown command: "%s"' % message.text)
@@ -388,7 +388,16 @@ class piCamBot:
         if self.config['general']['delete_images']:
             os.remove(capture_file)
 
-    def commandCaptureVid(self, message):
+    def commandCaptureVid(self, message, cmd):
+        vid_len = 5
+        if cmd:
+            try:
+                vid_len = cmd.split(' ', 1)[1]
+                if vid_len:
+                    vid_len = int(vid_len)
+            except IndexError or ValueError:
+                pass
+
         message.reply_text('Capture of Video in progress, please wait...')
 
         if self.config['buzzer']['enable']:
@@ -402,7 +411,7 @@ class piCamBot:
         if os.path.exists(capture_file):
             os.remove(capture_file)
 
-        args = shlex.split(self.config['capturevid']['cmd'])
+        args = shlex.split(self.config['capturevid']['cmd'].format(vid_len=vid_len))
         try:
             subprocess.call(args)
         except Exception as e:
