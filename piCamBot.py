@@ -209,7 +209,7 @@ class piCamBot:
             self.commandDisarm(message)
         elif cmd == 'kill':
             self.commandKill(message)
-        elif cmd == '/start':
+        elif cmd == '/begin':
             self.commandLoopBack(message)
         elif cmd == '/stop':
             self.commandNoLoopBack(message)
