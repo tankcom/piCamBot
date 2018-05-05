@@ -232,7 +232,7 @@ class piCamBot:
             if not self.isLoopBackRunning():
                 self.commandLoopBack(message)
                 bundo = True
-                time.sleep(0.5)
+                time.sleep(500)
                 self.commandCaptureVid(message, cmd)
 
                 return
