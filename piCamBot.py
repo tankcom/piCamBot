@@ -229,9 +229,10 @@ class piCamBot:
             #if stopStart:
             #    self.commandArm(message)
         elif cmd.startswith('/vid'):
-            if not self.isLoopBackRunning(message):
+            if not self.isLoopBackRunning():
                 self.commandLoopBack(message)
                 bundo = True
+                self.commandCaptureVid(message, cmd)
                 return
             self.commandCaptureVid(message, cmd)
 
