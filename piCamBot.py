@@ -45,6 +45,8 @@ class piCamBot:
         self.bot = None
         # GPIO module, dynamically loaded depending on config
         self.GPIO = None
+        #set loopback thingy
+        self.LoopBack = False
 
     def run(self):
         # setup logging, we want to log both to stdout and a file
