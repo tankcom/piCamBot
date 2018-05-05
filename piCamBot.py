@@ -224,6 +224,39 @@ class piCamBot:
         else:
             self.logger.warn('Unknown command: "%s"' % message.text)
 
+    def commandLoopBack(self, message):
+        if self.LoopBack:
+            message.reply_text('Loopback Already running')
+            return
+        message.reply_text('Enabling LoopBack')
+        args = ['ffmpeg', '-video_size', '1280x720',  '-i', '/dev/video0', '-vcodec rawvideo', '-f', 'v4l2', '/dev/video1', '-vcodec',
+                'rawvideo', '-f', 'v4l2', '/dev/video3', '-vf',
+                "drawtext=fontfile=/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf: text='%{localtime\:%T}%{n}': fontcolor=white@0.8: x=7: y=700",
+                '-f', 'flv', '-vcodec', 'h264_omx', '-f', 'flv', 'rtmp://localhost:1935/hls/stream']
+        try:
+            self.pidLoopBack = subprocess.Popen(args)
+            self.LoopBack = True
+        except Exception as e:
+            self.logger.warn(str(e))
+            self.logger.warn(traceback.format_exc())
+            message.reply_text('Error: Failed to start LoopBack software: %s' % str(e))
+            return
+
+    def commandNoLoopBack(self, message):
+        if not self.LoopBack:
+            message.reply_text('Loopback not running, nothing to do. Kill with killloopback')
+            return
+            message.reply_text('Killing Loopback')
+
+            args = ['kill', self.pidLoopBack]
+        try:
+            subprocess.call(args)
+            self.LoopBack = False
+        except Exception as e:
+            self.logger.warn(str(e))
+            self.logger.warn(traceback.format_exc())
+            message.reply_text('Error: Failed to start LoopBack software: %s' % str(e))
+            return
     def commandArm(self, message):
         if self.armed:
             message.reply_text('Motion-based capturing already enabled! Nothing to do.')
