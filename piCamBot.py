@@ -215,6 +215,8 @@ class piCamBot:
             self.commandNoLoopBack(message)
         elif cmd == '/status':
             self.commandStatus(message)
+        elif cmd == '/help':
+            self.commandHelp(message)
         elif cmd == '/pic':
             # if motion software is running we have to stop and restart it for capturing images
             # no we dont, only losers use Raspistill
