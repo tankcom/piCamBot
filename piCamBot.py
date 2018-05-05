@@ -254,7 +254,7 @@ class piCamBot:
             return
             message.reply_text('Killing Loopback')
 
-            args = ['kill', self.pidLoopBack]
+        args = ['kill', self.pidLoopBack]
         try:
             subprocess.call(args)
             self.LoopBack = False
