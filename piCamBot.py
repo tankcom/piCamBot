@@ -242,6 +242,7 @@ class piCamBot:
         try:
             self.pidLoopBack = subprocess.Popen(args)
             self.LoopBack = True
+            message.reply_text('Started Loopback')
         except Exception as e:
             self.logger.warn(str(e))
             self.logger.warn(traceback.format_exc())
@@ -252,16 +253,17 @@ class piCamBot:
         if not self.LoopBack:
             message.reply_text('Loopback not running, nothing to do. Kill with killloopback')
             return
-            message.reply_text('Killing Loopback')
+        message.reply_text('Killing Loopback')
 
-        args = ['kill', self.pidLoopBack]
+        args = ['kill', str(self.pidLoopBack)]
         try:
             subprocess.call(args)
             self.LoopBack = False
+            message.reply_text('Killed LoopBack')
         except Exception as e:
             self.logger.warn(str(e))
             self.logger.warn(traceback.format_exc())
-            message.reply_text('Error: Failed to start LoopBack software: %s' % str(e))
+            message.reply_text('Error: Failed to stop LoopBack software: %s' % str(e))
             return
     def commandArm(self, message):
         if self.armed:
