@@ -47,6 +47,8 @@ class piCamBot:
         self.GPIO = None
         #set loopback thingy
         self.LoopBack = False
+        #set loopack pid thingy
+        self.pidLoopBack = None
 
     def run(self):
         # setup logging, we want to log both to stdout and a file
@@ -227,14 +229,25 @@ class piCamBot:
             #if stopStart:
             #    self.commandArm(message)
         elif cmd.startswith('/vid'):
+            undo = None
+            if not self.isLoopBackRunning():
+                self.commandLoopBack(message)
+                undo = True
+                return
             self.commandCaptureVid(message, cmd)
+
+            if undo:
+                self.commandNoLoopBack()
+                undo = False
+                return
+
 
         else:
             self.logger.warn('Unknown command: "%s"' % message.text)
 
     def commandHelp(self, message):
         message.reply_text('/arm Start Motion Detection \n /disarm Stop Motion Detection \n kill Forcefully Shutdown Motion \
-        \n /begin Start Vital Processes \n Kill vital Processes \n /status Show Status \n /pic Capture Still Photo \n /vid n Capture Video with length n \n /help dis')
+        \n /begin Start Vital Processes \n /stop Kill vital Processes for Video Capture \n /status Show Status \n /pic Capture Still Photo \n /vid n Capture Video with length n \n /help dis')
 
     def commandLoopBack(self, message):
         if self.LoopBack:
@@ -266,6 +279,7 @@ class piCamBot:
             subprocess.call(args)
             self.LoopBack = False
             message.reply_text('Killed LoopBack')
+            self.pidLoopBack = None
         except Exception as e:
             self.logger.warn(str(e))
             self.logger.warn(traceback.format_exc())
@@ -389,6 +403,10 @@ class piCamBot:
         if not self.armed:
             message.reply_text('Motion-based capturing not enabled.')
             return
+        if not self.LoopBack:
+            message.reply_text('Loopback not enabled')
+        else: message.reply_text('Loopback enabled')
+        return
 
         image_dir = self.config['general']['image_dir']
         if not os.path.exists(image_dir):
@@ -540,6 +558,12 @@ class piCamBot:
     def isMotionRunning(self):
         pid = self.getMotionPID()
         return os.path.exists('/proc/%s' % pid)
+
+    def isLoopBackRunning(self):
+
+        if self.pidLoopBack:
+            return True
+
 
     def watchPIR(self):
         self.logger.info('Setting up PIR watch thread')
