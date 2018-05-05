@@ -235,7 +235,7 @@ class piCamBot:
             message.reply_text('Loopback Already running')
             return
         message.reply_text('Enabling LoopBack')
-        args = ['ffmpeg', '-video_size', '1280x720',  '-i', '/dev/video0', '-vcodec rawvideo', '-f', 'v4l2', '/dev/video1', '-vcodec',
+        args = ['ffmpeg', '-video_size', '1280x720',  '-i', '/dev/video0', '-vcodec', 'rawvideo', '-f', 'v4l2', '/dev/video1', '-vcodec',
                 'rawvideo', '-f', 'v4l2', '/dev/video3', '-vf',
                 "drawtext=fontfile=/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf: text='%{localtime\:%T}%{n}': fontcolor=white@0.8: x=7: y=700",
                 '-f', 'flv', '-vcodec', 'h264_omx', '-f', 'flv', 'rtmp://localhost:1935/hls/stream']
