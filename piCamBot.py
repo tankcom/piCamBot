@@ -229,6 +229,7 @@ class piCamBot:
             #if stopStart:
             #    self.commandArm(message)
         elif cmd.startswith('/vid'):
+            bundo = False
             if not self.isLoopBackRunning():
                 self.commandLoopBack(message)
                 bundo = True
@@ -239,7 +240,7 @@ class piCamBot:
             if bundo:
                 self.commandNoLoopBack()
                 bundo = False
-                
+
 
 
         else:
@@ -259,7 +260,7 @@ class piCamBot:
                 "drawtext=fontfile=/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf: text='%{localtime\:%T}%{n}': fontcolor=white@0.8: x=7: y=700",
                 '-f', 'flv', '-vcodec', 'h264_omx', '-f', 'flv', 'rtmp://localhost:1935/hls/stream']
         try:
-            self.pidLoopBack = subprocess.Popen(args, close_fds=True).pid
+            self.pidLoopBack = subprocess.Popen(args).pid
             self.LoopBack = True
             message.reply_text('Started Loopback with pid {p}'.format(p=self.pidLoopBack))
         except Exception as e:
