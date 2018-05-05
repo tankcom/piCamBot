@@ -366,7 +366,7 @@ class piCamBot:
                 self.playSequence(buzzer_sequence)
 
         capture_file = self.config['capture']['file']
-        if sys.version_info[0] == 2: # yay! python 2 vs 3 unicode fuckup
+        if sys.version_info[0] == 2: # yay! python 2 vs 3 unicode
             capture_file = capture_file.encode('utf-8')
         if os.path.exists(capture_file):
             os.remove(capture_file)
@@ -398,7 +398,7 @@ class piCamBot:
             except IndexError or ValueError:
                 pass
 
-        message.reply_text('Capture of Video in progress, please wait...')
+        message.reply_text('Capture of Video in progress, Bot will be unresponsive while capturing, please wait...')
 
         if self.config['buzzer']['enable']:
             buzzer_sequence = self.config['buzzer']['seq_capture']
@@ -547,7 +547,7 @@ class piCamBot:
             self.GPIO.output(gpio, 0)
             self.GPIO.cleanup()
 
-        msg = 'Caught signal %d, terminating now.' % signal
+        msg = 'Caught signal %d, I\'ll be back..' % signal
         self.logger.error(msg)
         for owner_id in self.config['telegram']['owner_ids']:
             try:

@@ -61,7 +61,7 @@
         "//": "command for creating a snapshot",
 	"//": "note: the resulting image should be located outside the usual image_dir,",
 	"//": "      otherwise it gets ignored while motion tracking is disabled",
-        "cmd": ""ffmpeg -i /dev/video3 -t 3 /tmp/piCamBot.jpg"",
+        "cmd": ""ffmpeg -i /dev/video3 -t 1 /tmp/piCamBot.jpg"",
 
         "//": "where to find the image after capturing",
         "file": "/tmp/piCamBot.jpg"
