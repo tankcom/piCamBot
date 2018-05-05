@@ -230,6 +230,10 @@ class piCamBot:
         else:
             self.logger.warn('Unknown command: "%s"' % message.text)
 
+    def commandHelp(self, message):
+        message.reply_text('/arm Start Motion Detection \n /disarm Stop Motion Detection \n kill Forcefully Shutdown Motion \
+        \n /begin Start Vital Processes \n Kill vital Processes \n /status Show Status \n /pic Capture Still Photo \n /vid n Capture Video with length n \n /help dis')
+
     def commandLoopBack(self, message):
         if self.LoopBack:
             message.reply_text('Loopback Already running')
