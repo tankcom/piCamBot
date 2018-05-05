@@ -239,7 +239,7 @@ class piCamBot:
             self.commandCaptureVid(message, cmd)
 
             if bundo:
-                self.commandNoLoopBack()
+                self.commandNoLoopBack(message)
                 bundo = False
                 return
 
