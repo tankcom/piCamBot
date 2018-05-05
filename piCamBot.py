@@ -208,6 +208,10 @@ class piCamBot:
         elif cmd == 'kill':
             self.commandKill(message)
         elif cmd == '/status':
+            self.commandLoopBack(message)
+        elif cmd == '/start':
+            self.commandNoLoopBack(message)
+        elif cmd == '/stop':
             self.commandStatus(message)
         elif cmd == '/pic':
             # if motion software is running we have to stop and restart it for capturing images
