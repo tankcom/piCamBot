@@ -17,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="244" column="73" selection-start-line="244" selection-start-column="73" selection-end-line="244" selection-end-column="73" />
+              <caret line="244" column="56" selection-start-line="244" selection-start-column="56" selection-end-line="244" selection-end-column="56" />
               <folding>
                 <element signature="e#12900#13696#0" />
               </folding>
@@ -233,7 +233,7 @@
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="244" column="73" selection-start-line="244" selection-start-column="73" selection-end-line="244" selection-end-column="73" />
+          <caret line="244" column="56" selection-start-line="244" selection-start-column="56" selection-end-line="244" selection-end-column="56" />
           <folding>
             <element signature="e#12900#13696#0" />
           </folding>
