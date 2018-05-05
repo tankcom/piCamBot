@@ -240,6 +240,7 @@ class piCamBot:
             if bundo:
                 self.commandNoLoopBack()
                 bundo = False
+                return
 
 
 
