@@ -242,7 +242,7 @@ class piCamBot:
         try:
             self.pidLoopBack = subprocess.Popen(args)
             self.LoopBack = True
-            message.reply_text('Started Loopback')
+            message.reply_text('Started Loopback' 'self.pidLoopBack')
         except Exception as e:
             self.logger.warn(str(e))
             self.logger.warn(traceback.format_exc())
