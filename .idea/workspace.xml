@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="223" column="43" lean-forward="true" selection-start-line="223" selection-start-column="43" selection-end-line="223" selection-end-column="43" />
+            <state relative-caret-position="415">
+              <caret line="437" column="7" selection-start-line="437" selection-start-column="7" selection-end-line="437" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -55,7 +55,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds">
     <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
@@ -146,7 +146,21 @@
       <option name="project" value="LOCAL" />
       <updated>1525595004329</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed automatically disabling LoopBack after disarming">
+      <created>1525595693286</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1525595693286</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added automatically disabling motion after disabling Loopback">
+      <created>1525595884702</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1525595884702</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -160,11 +174,11 @@
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.328877" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49853945" visible="true" weight="0.10208333" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984456" visible="true" weight="0.10294118" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="SciView" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.50146055" side_tool="true" visible="true" weight="0.10208333" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5015544" side_tool="true" visible="true" weight="0.10294118" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -185,7 +199,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="try stuff to fix auto arming" />
     <MESSAGE value="Auto Loopback added to more commands" />
-    <option name="LAST_COMMIT_MESSAGE" value="Auto Loopback added to more commands" />
+    <MESSAGE value="Fixed automatically disabling LoopBack after disarming" />
+    <MESSAGE value="Added automatically disabling motion after disabling Loopback" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added automatically disabling motion after disabling Loopback" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -206,8 +222,8 @@
     <entry file="file://$PROJECT_DIR$/motion_default.conf" />
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="223" column="43" lean-forward="true" selection-start-line="223" selection-start-column="43" selection-end-line="223" selection-end-column="43" />
+        <state relative-caret-position="415">
+          <caret line="437" column="7" selection-start-line="437" selection-start-column="7" selection-end-line="437" selection-end-column="7" />
         </state>
       </provider>
     </entry>

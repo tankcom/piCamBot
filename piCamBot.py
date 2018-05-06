@@ -431,11 +431,11 @@ class piCamBot:
     def commandStatus(self, message):
         if not self.armed:
             message.reply_text('Motion-based capturing not enabled.')
-            return
+
         if not self.LoopBack:
             message.reply_text('Loopback not enabled')
         else: message.reply_text('Loopback enabled')
-        return
+
 
         image_dir = self.config['general']['image_dir']
         if not os.path.exists(image_dir):
