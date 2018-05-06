@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="437" column="7" selection-start-line="437" selection-start-column="7" selection-end-line="437" selection-end-column="7" />
+            <state relative-caret-position="636">
+              <caret line="450" column="26" lean-forward="true" selection-start-line="450" selection-start-column="26" selection-end-line="450" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -160,7 +160,21 @@
       <option name="project" value="LOCAL" />
       <updated>1525595884702</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed Status Command">
+      <created>1525596132160</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1525596132160</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed Status Command">
+      <created>1525596613347</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1525596613347</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -177,6 +191,7 @@
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984456" visible="true" weight="0.10294118" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.28704664" />
       <window_info anchor="right" id="SciView" />
       <window_info active="true" id="Structure" order="1" sideWeight="0.5015544" side_tool="true" visible="true" weight="0.10294118" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -185,7 +200,6 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
@@ -201,7 +215,8 @@
     <MESSAGE value="Auto Loopback added to more commands" />
     <MESSAGE value="Fixed automatically disabling LoopBack after disarming" />
     <MESSAGE value="Added automatically disabling motion after disabling Loopback" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added automatically disabling motion after disabling Loopback" />
+    <MESSAGE value="Fixed Status Command" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Status Command" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -222,8 +237,8 @@
     <entry file="file://$PROJECT_DIR$/motion_default.conf" />
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="437" column="7" selection-start-line="437" selection-start-column="7" selection-end-line="437" selection-end-column="7" />
+        <state relative-caret-position="636">
+          <caret line="450" column="26" lean-forward="true" selection-start-line="450" selection-start-column="26" selection-end-line="450" selection-end-column="26" />
         </state>
       </provider>
     </entry>

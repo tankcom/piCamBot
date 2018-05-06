@@ -446,8 +446,9 @@ class piCamBot:
         if self.config['motion']['enable']:
             # check if motion software is running or died unexpectedly
             if not self.isMotionRunning():
-                message.reply_text('Error: Motion-based capturing enabled but motion software not running!')
-                return
+                if not self.armed:
+                    message.reply_text('Error: Motion-based capturing enabled but motion software not running!')
+                    return
             message.reply_text('Motion-based capturing enabled and motion software running.')
         else:
             message.reply_text('Motion-based capturing enabled.')
