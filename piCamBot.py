@@ -449,7 +449,8 @@ class piCamBot:
                 if self.armed:
                     message.reply_text('Error: Motion-based capturing enabled but motion software not running!')
                     return
-            message.reply_text('Motion-based capturing enabled and motion software running.')
+            if self.armed:
+                message.reply_text('Motion-based capturing enabled and motion software running.')
         else:
             message.reply_text('Motion-based capturing enabled.')
 

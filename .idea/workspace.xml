@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="636">
-              <caret line="450" column="26" lean-forward="true" selection-start-line="450" selection-start-column="26" selection-end-line="450" selection-end-column="26" />
+            <state relative-caret-position="653">
+              <caret line="451" column="26" lean-forward="true" selection-start-line="451" selection-start-column="26" selection-end-line="451" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -174,7 +174,21 @@
       <option name="project" value="LOCAL" />
       <updated>1525596613347</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Fixed Status Command">
+      <created>1525596800127</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1525596800127</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fixed Typo">
+      <created>1525596886044</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1525596886044</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -216,7 +230,8 @@
     <MESSAGE value="Fixed automatically disabling LoopBack after disarming" />
     <MESSAGE value="Added automatically disabling motion after disabling Loopback" />
     <MESSAGE value="Fixed Status Command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Status Command" />
+    <MESSAGE value="Fixed Typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Typo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -237,8 +252,8 @@
     <entry file="file://$PROJECT_DIR$/motion_default.conf" />
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="636">
-          <caret line="450" column="26" lean-forward="true" selection-start-line="450" selection-start-column="26" selection-end-line="450" selection-end-column="26" />
+        <state relative-caret-position="653">
+          <caret line="451" column="26" lean-forward="true" selection-start-line="451" selection-start-column="26" selection-end-line="451" selection-end-column="26" />
         </state>
       </provider>
     </entry>
