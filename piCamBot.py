@@ -228,7 +228,9 @@ class piCamBot:
             self.commandLoopBack(message)
         elif cmd == '/stop':
             self.commandNoLoopBack(message)
-            if self.isMotionRunning(message):
+            if self.isMotionRunning():
+                self.commandDisarm(message)
+            if self.armed:
                 self.commandDisarm(message)
         elif cmd == '/status':
             self.commandStatus(message)
@@ -299,7 +301,7 @@ class piCamBot:
 
     def commandNoLoopBack(self, message):
         if not self.LoopBack:
-            message.reply_text('Loopback not running, nothing to do. Kill with killloopback')
+            message.reply_text('Loopback not running, nothing to do.')
             return
         message.reply_text('Killing Loopback')
 
