@@ -206,7 +206,20 @@ class piCamBot:
             # ignore default start command
             return
         if cmd == '/arm':
+            undo = False
+            if not self.isLoopBackRunning():
+                undo = True
+                self.commandLoopBack(message)
+
+                time.sleep(2)
+
             self.commandArm(message)
+            time.sleep(2)
+
+            if undo:
+                self.commandNoLoopBack(message)
+                return
+
         elif cmd == '/disarm':
             self.commandDisarm(message)
         elif cmd == 'kill':
@@ -225,7 +238,18 @@ class piCamBot:
             #stopStart = self.isMotionRunning()
             #if stopStart:
             #    self.commandDisarm(message)
+            undo = False
+            if not self.isLoopBackRunning():
+                undo = True
+                self.commandLoopBack(message)
+
+                time.sleep(2)
             self.commandCapture(message)
+            time.sleep(2)
+
+            if undo:
+                self.commandNoLoopBack(message)
+                return
             #if stopStart:
             #    self.commandArm(message)
         elif cmd.startswith('/vid'):
