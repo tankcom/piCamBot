@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007137af-dfce-4299-8912-06e5ee02ceb4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/piCamBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/piCamBot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,26 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="575">
-              <caret line="241" column="43" lean-forward="true" selection-start-line="241" selection-start-column="43" selection-end-line="241" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="motion_default.conf" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/motion_default.conf">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config_default.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config_default.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="49" column="45" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="45" />
+            <state relative-caret-position="793">
+              <caret line="242" column="47" selection-start-line="242" selection-start-column="47" selection-end-line="242" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -63,6 +46,15 @@
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
   <component name="ProjectFrameBounds" fullScreen="true">
     <option name="width" value="1920" />
     <option name="height" value="1080" />
@@ -72,6 +64,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -83,12 +76,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -115,6 +108,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/piCamBot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -144,24 +138,31 @@
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49902725" visible="true" weight="0.10208333" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32976654" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.328877" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.50097275" side_tool="true" visible="true" weight="0.10208333" />
       <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49853945" visible="true" weight="0.10208333" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="SciView" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.50146055" side_tool="true" visible="true" weight="0.10208333" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -172,87 +173,21 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/piCamBot.py" />
+    <entry file="file://$PROJECT_DIR$/config_default.json" />
+    <entry file="file://$PROJECT_DIR$/piCamBot.py" />
+    <entry file="file://$PROJECT_DIR$/config_default.json" />
+    <entry file="file://$PROJECT_DIR$/piCamBot.py" />
+    <entry file="file://$PROJECT_DIR$/config_default.json" />
+    <entry file="file://$PROJECT_DIR$/piCamBot.py" />
+    <entry file="file://$PROJECT_DIR$/config_default.json" />
+    <entry file="file://$PROJECT_DIR$/motion_default.conf" />
+    <entry file="file://$PROJECT_DIR$/config_default.json" />
+    <entry file="file://$PROJECT_DIR$/motion_default.conf" />
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3240">
-          <caret line="216" column="44" lean-forward="true" selection-start-line="214" selection-start-column="47" selection-end-line="216" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_default.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/piCamBot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6000">
-          <caret line="400" column="71" selection-start-line="400" selection-start-column="71" selection-end-line="400" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_default.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/piCamBot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6210">
-          <caret line="414" column="26" lean-forward="true" selection-start-line="414" selection-start-column="26" selection-end-line="414" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_default.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/piCamBot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3225">
-          <caret line="215" column="26" lean-forward="true" selection-start-line="215" selection-start-column="26" selection-end-line="215" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_default.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="34" selection-start-line="66" selection-start-column="34" selection-end-line="66" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/motion_default.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7140">
-          <caret line="476" column="13" selection-start-line="476" selection-start-column="13" selection-end-line="476" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config_default.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="49" column="45" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/motion_default.conf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/piCamBot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="241" column="43" lean-forward="true" selection-start-line="241" selection-start-column="43" selection-end-line="241" selection-end-column="43" />
+        <state relative-caret-position="793">
+          <caret line="242" column="47" selection-start-line="242" selection-start-column="47" selection-end-line="242" selection-end-column="47" />
         </state>
       </provider>
     </entry>
