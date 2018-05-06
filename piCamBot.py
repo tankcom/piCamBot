@@ -49,6 +49,8 @@ class piCamBot:
         self.LoopBack = False
         #set loopack pid thingy
         self.pidLoopBack = None
+        #set Variable for Auto Disabling Loopback after disarming
+        self.motionLoopBack = None
 
     def run(self):
         # setup logging, we want to log both to stdout and a file
@@ -208,20 +210,18 @@ class piCamBot:
         if cmd == '/arm':
             undo = False
             if not self.isLoopBackRunning():
-                undo = True
+                self.motionLoopBack = True
                 self.commandLoopBack(message)
 
                 time.sleep(2)
 
             self.commandArm(message)
-            time.sleep(2)
-
-            if undo:
-                self.commandNoLoopBack(message)
-                return
 
         elif cmd == '/disarm':
             self.commandDisarm(message)
+            if self.motionLoopBack:
+                self.commandNoLoopBack(message)
+                self.motionLoopBack = False
         elif cmd == 'kill':
             self.commandKill(message)
         elif cmd == '/begin':
