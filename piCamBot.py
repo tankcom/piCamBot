@@ -434,6 +434,7 @@ class piCamBot:
 
         if not self.LoopBack:
             message.reply_text('Loopback not enabled')
+            return
         else: message.reply_text('Loopback enabled')
 
 
