@@ -208,9 +208,8 @@ class piCamBot:
             # ignore default start command
             return
         if cmd == '/arm':
-            undo = False
             if not self.isLoopBackRunning():
-                self.motionLoopBack = True
+                self.motionLoopBack = True # Set Variable to show that loopback was started with the arm command
                 self.commandLoopBack(message)
 
                 time.sleep(2)
@@ -219,22 +218,22 @@ class piCamBot:
 
         elif cmd == '/disarm':
             self.commandDisarm(message)
-            if self.motionLoopBack:
-                self.commandNoLoopBack(message)
-                self.motionLoopBack = False
+            if self.motionLoopBack: # if loopback was started with the arm command, it should be disabled by disarming
+                self.commandNoLoopBack(message) #disable loopback
+                self.motionLoopBack = False # set variable to show that loopback is disabled
         elif cmd == '/kill':
             self.commandKill(message)
         elif cmd == '/begin':
-            self.commandLoopBack(message)
+            self.commandLoopBack(message)  #start loopback alone, can only be terminated by stop command
         elif cmd == '/stop':
-            if self.isMotionRunning() or self.armed:
+            if self.isMotionRunning() or self.armed: #if armed, disable motion first, because motion is useless with loopback not running
                 self.commandDisarm(message)
             self.commandNoLoopBack(message)
         elif cmd == '/status':
             self.commandStatus(message)
         elif cmd == '/help':
             self.commandHelp(message)
-        elif cmd == '/list':
+        elif cmd == '/list':  # used for BotFather
             self.commandList(message)
         elif cmd == '/pic':
             # if motion software is running we have to stop and restart it for capturing images
@@ -242,24 +241,24 @@ class piCamBot:
             #stopStart = self.isMotionRunning()
             #if stopStart:
             #    self.commandDisarm(message)
-            undo = False
+            undo = False  # unnecessary?
             if not self.isLoopBackRunning():
-                undo = True
+                undo = True  # set to true to see if the pic command started loopback
                 self.commandLoopBack(message)
 
-                time.sleep(2)
+                time.sleep(2) # wait for ffmpeg to start up
             self.commandCapture(message)
-            time.sleep(2)
+            time.sleep(2) #wait for ffmpeg to capture
 
-            if undo:
+            if undo:  # if the pic command started loopback, revert to previous state
                 self.commandNoLoopBack(message)
                 return
             #if stopStart:
             #    self.commandArm(message)
         elif cmd.startswith('/vid'):
-            undo = False
+            undo = False # unecessary?
             if not self.isLoopBackRunning():
-                undo = True
+                undo = True # set to true to see if the vid command started loopback
                 self.commandLoopBack(message)
 
                 time.sleep(2)
@@ -267,7 +266,7 @@ class piCamBot:
             self.commandCaptureVid(message, cmd)
             time.sleep(2)
 
-            if undo:
+            if undo: #if the vid command started loopback, revert to previous state
                 self.commandNoLoopBack(message)
                 return
 
@@ -283,7 +282,7 @@ class piCamBot:
 
     def commandList(self, message):
         message.reply_text('Paste the following list after using the /setcommands command on the BotFather in Telegram to add them. Only necessary on First Configuration \n \n arm - Start Motion Detection \n disarm - Stop Motion Detection \n kill - Forcefully Shutdown Motion \
-        \n begin - Start Vital Processes \n stop - Kill vital Processes for Video Capture \n status - Show Status \n pic - Capture Still Photo \n vid  - Capture Video with custom length, default is 5  \n help - Display all Commands clickable')
+        \n begin - Start Vital Processes \n stop - Kill vital Processes for Video Capture, reduces cpu load of piCamBot to 0 \n status - Show Status \n pic - Capture Still Photo \n vid  - Capture Video with custom length, default is 5  \n help - Display all Commands clickable')
 
     def commandLoopBack(self, message):
         if self.LoopBack:
@@ -293,10 +292,13 @@ class piCamBot:
         args = ['ffmpeg', '-video_size', '1280x720',  '-i', '/dev/video0', '-vcodec', 'rawvideo', '-f', 'v4l2', '/dev/video1', '-vcodec',
                 'rawvideo', '-f', 'v4l2', '/dev/video3', '-vf',
                 "drawtext=fontfile=/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf: text='%{localtime\:%T}%{n}': fontcolor=white@0.8: x=7: y=700",
-                '-f', 'flv', '-vcodec', 'h264_omx', '-f', 'flv', 'rtmp://localhost:1935/hls/stream']
+                '-f', 'flv', '-vcodec', 'h264_omx', '-f', 'flv', 'rtmp://localhost:1935/hls/stream']  # hardcoded stream address, may be bad.
+            # ffmpeg streams the camera input video0 to video1, where motion is watching and video3, where the pic and vid command are watching
+            # it also streams hardware encoded h264 to rtmp://localhost:1935/hls/stream, where nginx needs to be listening before starting up
+            # ffmpeg needs to be compiled with h264_omx support, nginx needs to be compiled with the rtmp streamer module.
         try:
             self.pidLoopBack = subprocess.Popen(args).pid
-            self.LoopBack = True
+            self.LoopBack = True  # set variable to quickly check if loopback is running, similar to self.armed
             message.reply_text('Started Loopback with pid {p}'.format(p=self.pidLoopBack))
         except Exception as e:
             self.logger.warn(str(e))
@@ -315,12 +317,13 @@ class piCamBot:
             subprocess.call(args)
             self.LoopBack = False
             message.reply_text('Killed LoopBack')
-            self.pidLoopBack = None
+            self.pidLoopBack = None  #set to None, to check later if loopback is running or not
         except Exception as e:
             self.logger.warn(str(e))
             self.logger.warn(traceback.format_exc())
             message.reply_text('Error: Failed to stop LoopBack software: %s' % str(e))
             return
+
     def commandArm(self, message):
         if self.armed:
             message.reply_text('Motion-based capturing already enabled! Nothing to do.')
@@ -601,7 +604,7 @@ class piCamBot:
 
     def isLoopBackRunning(self):
 
-        if self.pidLoopBack:
+        if self.pidLoopBack:  # if the variable is not empty, loopback started successfully (hopefully)
             return True
 
 
