@@ -1,16 +1,16 @@
 # piCamBot
 Security camera based on a Raspberry Pi and Telegram, controllable via smartphone and desktop computer. Key differences to[scaidermerns bot]( https://github.com/scaidermern/piCamBot) are:
 
--Using ffmpeg for livestreaming and capturing stills with the following benefits:
-	-Support of Hardware Accelerated h264_omx encoding for both 		livestream and manual capture of stills and videos.
-	-Not having to stop motion detection for capturing stills and 	videos
-	-Higher livestream resolution and/or fps.
--Added command to record video with custom length
--livestream with nginx rtmp module instead of motion
+- Using ffmpeg for livestreaming and capturing stills with the following benefits:
+	- Support of Hardware Accelerated h264_omx encoding for both 		livestream and manual capture of stills and videos.
+	- Not having to stop motion detection for capturing stills and 	videos
+	- Higher livestream resolution and/or fps.
+- Added command to record video with custom length
+- livestream with nginx rtmp module instead of motion
 
 
 ## Description
-This is a simple Telegram bot that acts as a security camera. It is intented to run on a Raspberry Pi but may be used on any other Linux system, too. It requires a camera (for example a Raspberry Pi Camera Module v2) and the software *motion*. It supports livestreaming with ffmpeg over the [nginx-rtmp-module]( https://github.com/arut/nginx-rtmp-module), and needs a configured nginx server to run with the default config. Hardware accelerated encoding with H264_omx is supported on the raspberry pi. It can be controlled by any Telegram client, thus supporting many different client platforms such as smartphones (Android, iOS and Windows Phone) and desktop computers (Linux, macOS and Windows).
+This is a simple Telegram bot that acts as a security camera. It is intended to run on a Raspberry Pi but may be used on any other Linux system, too. It requires a camera (for example a Raspberry Pi Camera Module v2) and the software *motion*. It supports livestreaming with ffmpeg over the [nginx-rtmp-module]( https://github.com/arut/nginx-rtmp-module), and needs a configured nginx server to run with the default config. Hardware accelerated encoding with H264_omx is supported on the raspberry pi. It can be controlled by any Telegram client, thus supporting many different client platforms such as smartphones (Android, iOS and Windows Phone) and desktop computers (Linux, macOS and Windows).
 
 ## Requirements
 - Raspberry Pi with Raspbian (recommended, but works on any other Linux system with some adjustments)
@@ -20,6 +20,7 @@ This is a simple Telegram bot that acts as a security camera. It is intented to 
   - [RPi.GPIO](https://sourceforge.net/projects/raspberry-gpio-python/) (optional, for controlling a PIR sensor or buzzer)
   - [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot)
   - [PyInotify](https://github.com/dsoprea/PyInotify)
+- nginx server compiled with the [nginx-rtmp-module]( https://github.com/arut/nginx-rtmp-module)
 
 To install the necessary software on Raspbian, Debian or a similar distribution use the following commands:
 - as root:
