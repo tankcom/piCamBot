@@ -227,11 +227,9 @@ class piCamBot:
         elif cmd == '/begin':
             self.commandLoopBack(message)
         elif cmd == '/stop':
+            if self.isMotionRunning() or self.armed:
+                self.commandDisarm(message)
             self.commandNoLoopBack(message)
-            if self.isMotionRunning():
-                self.commandDisarm(message)
-            if self.armed:
-                self.commandDisarm(message)
         elif cmd == '/status':
             self.commandStatus(message)
         elif cmd == '/help':
