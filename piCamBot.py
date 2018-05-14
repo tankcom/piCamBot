@@ -222,7 +222,7 @@ class piCamBot:
             if self.motionLoopBack:
                 self.commandNoLoopBack(message)
                 self.motionLoopBack = False
-        elif cmd == 'kill':
+        elif cmd == '/kill':
             self.commandKill(message)
         elif cmd == '/begin':
             self.commandLoopBack(message)
@@ -236,6 +236,8 @@ class piCamBot:
             self.commandStatus(message)
         elif cmd == '/help':
             self.commandHelp(message)
+        elif cmd == '/list':
+            self.commandList(message)
         elif cmd == '/pic':
             # if motion software is running we have to stop and restart it for capturing images
             # no we dont, only losers use Raspistill
@@ -275,10 +277,15 @@ class piCamBot:
 
         else:
             self.logger.warn('Unknown command: "%s"' % message.text)
+            message.reply_text('Unknown Command, type /list to show commands')
 
     def commandHelp(self, message):
-        message.reply_text('/arm Start Motion Detection \n /disarm Stop Motion Detection \n kill Forcefully Shutdown Motion \
-        \n /begin Start Vital Processes \n /stop Kill vital Processes for Video Capture \n /status Show Status \n /pic Capture Still Photo \n /vid n Capture Video with length n \n /help dis')
+        message.reply_text('/arm Start Motion Detection \n /disarm Stop Motion Detection \n /kill Forcefully Shutdown Motion \
+        \n /begin Start Vital Processes \n /stop Kill vital Processes for Video Capture \n /status Show Status \n /pic Capture Still Photo \n /vid n Capture Video with length n \n /help dis \n /list Show command list ready to paste into BotFathers /setcommands command')
+
+    def commandList(self, message):
+        message.reply_text('Paste the following list after using the /setcommands command on the BotFather in Telegram to add them. Only necessary on First Configuration \n \n arm - Start Motion Detection \n disarm - Stop Motion Detection \n kill - Forcefully Shutdown Motion \
+        \n begin - Start Vital Processes \n stop - Kill vital Processes for Video Capture \n status - Show Status \n pic - Capture Still Photo \n vid n - Capture Video with length n \n help - Display all Commands clickable')
 
     def commandLoopBack(self, message):
         if self.LoopBack:
