@@ -1,5 +1,5 @@
 # piCamBot
-Security camera based on a Raspberry Pi and Telegram, controllable via smartphone and desktop computer. Key differences to[scaidermerns bot]( https://github.com/scaidermern/piCamBot) are:
+Security camera based on a Raspberry Pi and Telegram, controllable via smartphone and desktop computer. Key differences to [scaidermerns bot]( https://github.com/scaidermern/piCamBot) are:
 
 - Using ffmpeg for livestreaming and capturing stills with the following benefits:
 	- Support of Hardware Accelerated h264_omx encoding for both 		livestream and manual capture of stills and videos.
