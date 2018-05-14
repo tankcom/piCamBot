@@ -224,6 +224,8 @@ class piCamBot:
         elif cmd == '/kill':
             self.commandKill(message)
         elif cmd == '/begin':
+            self.motionLoopBack = False # if begin is executed while the process is running because of the arm command
+                                        # disable the auto reset after disarming
             self.commandLoopBack(message)  #start loopback alone, can only be terminated by stop command
         elif cmd == '/stop':
             if self.isMotionRunning() or self.armed: #if armed, disable motion first, because motion is useless with loopback not running

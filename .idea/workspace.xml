@@ -16,8 +16,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="284" column="124" selection-start-line="284" selection-start-column="124" selection-end-line="284" selection-end-column="124" />
+            <state relative-caret-position="260">
+              <caret line="227" column="80" selection-start-line="227" selection-start-column="80" selection-end-line="227" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -261,8 +261,8 @@
     <entry file="file://$PROJECT_DIR$/motion_default.conf" />
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="284" column="124" selection-start-line="284" selection-start-column="124" selection-end-line="284" selection-end-column="124" />
+        <state relative-caret-position="260">
+          <caret line="227" column="80" selection-start-line="227" selection-start-column="80" selection-end-line="227" selection-end-column="80" />
         </state>
       </provider>
     </entry>
