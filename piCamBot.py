@@ -281,11 +281,11 @@ class piCamBot:
 
     def commandHelp(self, message):
         message.reply_text('/arm Start Motion Detection \n /disarm Stop Motion Detection \n /kill Forcefully Shutdown Motion \
-        \n /begin Start Vital Processes \n /stop Kill vital Processes for Video Capture \n /status Show Status \n /pic Capture Still Photo \n /vid n Capture Video with length n \n /help dis \n /list Show command list ready to paste into BotFathers /setcommands command')
+        \n /begin Start Vital Processes \n /stop Kill vital Processes for Video Capture \n /status Show Status \n /pic Capture Still Photo \n /vid n Capture Video with length n, default is 5s \n /help dis \n /list Show command list ready to paste into BotFathers /setcommands command')
 
     def commandList(self, message):
         message.reply_text('Paste the following list after using the /setcommands command on the BotFather in Telegram to add them. Only necessary on First Configuration \n \n arm - Start Motion Detection \n disarm - Stop Motion Detection \n kill - Forcefully Shutdown Motion \
-        \n begin - Start Vital Processes \n stop - Kill vital Processes for Video Capture \n status - Show Status \n pic - Capture Still Photo \n vid n - Capture Video with length n \n help - Display all Commands clickable')
+        \n begin - Start Vital Processes \n stop - Kill vital Processes for Video Capture \n status - Show Status \n pic - Capture Still Photo \n vid  - Capture Video with custom length, default is 5  \n help - Display all Commands clickable')
 
     def commandLoopBack(self, message):
         if self.LoopBack:
