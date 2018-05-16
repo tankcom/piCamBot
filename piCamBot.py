@@ -317,10 +317,10 @@ class piCamBot:
         output = commands.getoutput('ps auxf')
         if 'nginx1.conf' in output:
             self.IsNginxRunning = True
-            message.reply_text('Nginx is Running ({p})').format(p=self.IsNginxRunning)
+            message.reply_text('Nginx is Running {p}').format(p=self.IsNginxRunning)
         else:
             self.IsNginxRunning = False
-            message.reply_text('Nginx is notRunning ({p})').format(p=self.IsNginxRunning)
+            message.reply_text('Nginx is notRunning {p}').format(p=self.IsNginxRunning)
 
     def commandNoLoopBack(self, message):
         if not self.LoopBack:
