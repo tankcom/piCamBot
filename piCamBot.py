@@ -243,7 +243,7 @@ class piCamBot:
         elif cmd == '/list':  # used for BotFather
             self.commandList(message)
         elif cmd == '/test':  # used for BotFather
-            self.commandIsNginxRunning()
+            self.commandIsNginxRunning(message)
         elif cmd == '/pic':
             # if motion software is running we have to stop and restart it for capturing images
             # no we dont, only losers use Raspistill
@@ -323,7 +323,7 @@ class piCamBot:
             message.reply_text('Error: Failed to start LoopBack software: %s' % str(e))
             return
 
-    def commandIsNginxRunning(self):
+    def commandIsNginxRunning(self, message):
         output = commands.getoutput('ps auxf')
         if 'nginx1.conf' in output:
             self.IsNginxRunning = True
