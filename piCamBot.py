@@ -55,7 +55,7 @@ class piCamBot:
         # set Variable for checking if Nginx is running correctly
         self.IsNginxRunning = None
 
-    def run(self):
+    def run(self, message):
         # setup logging, we want to log both to stdout and a file
         logFormat = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         self.logger = logging.getLogger(__name__)
@@ -157,7 +157,7 @@ class piCamBot:
             pir_thread.start()
             threads.append(pir_thread)
 
-        self.commandIsNginxRunning(self)
+        self.commandIsNginxRunning(message)
 
         while True:
             time.sleep(1)
