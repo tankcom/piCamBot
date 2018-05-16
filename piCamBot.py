@@ -27,6 +27,7 @@ import sys
 import telegram
 import threading
 import time
+import commands
 import traceback
 from six.moves import range
 from telegram.error import NetworkError, Unauthorized
@@ -51,6 +52,8 @@ class piCamBot:
         self.pidLoopBack = None
         #set Variable for Auto Disabling Loopback after disarming
         self.motionLoopBack = None
+        # set Variable for checking if Nginx is running correctly
+        self.IsNginxRunning = None
 
     def run(self):
         # setup logging, we want to log both to stdout and a file
@@ -237,6 +240,8 @@ class piCamBot:
             self.commandHelp(message)
         elif cmd == '/list':  # used for BotFather
             self.commandList(message)
+        elif cmd == '/test':  # used for BotFather
+            self.commandIsNginxRunning(message)
         elif cmd == '/pic':
             # if motion software is running we have to stop and restart it for capturing images
             # no we dont, only losers use Raspistill
@@ -307,6 +312,15 @@ class piCamBot:
             self.logger.warn(traceback.format_exc())
             message.reply_text('Error: Failed to start LoopBack software: %s' % str(e))
             return
+
+    def commandIsNginxRunning(self, message):
+        output = commands.getoutput('ps auxf')
+        if 'nginx1.conf' in output:
+            self.IsNginxRunning = True
+            message.reply_text('Nginx is Running ({p})').format(p=self.IsNginxRunning)
+        else:
+            self.IsNginxRunning = False
+            message.reply_text('Nginx is notRunning ({p})').format(p=self.IsNginxRunning)
 
     def commandNoLoopBack(self, message):
         if not self.LoopBack:
