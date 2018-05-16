@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="007137af-dfce-4299-8912-06e5ee02ceb4" name="Default" comment="Added Nginx check to loopback command">
+    <list default="true" id="007137af-dfce-4299-8912-06e5ee02ceb4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/piCamBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/piCamBot.py" afterDir="false" />
     </list>
@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
-              <caret line="248" column="50" selection-start-line="248" selection-start-column="50" selection-end-line="248" selection-end-column="50" />
+            <state relative-caret-position="433">
+              <caret line="164" column="34" lean-forward="true" selection-start-line="164" selection-start-column="34" selection-end-line="164" selection-end-column="34" />
               <folding>
                 <element signature="e#356#372#0" expanded="true" />
               </folding>
@@ -216,7 +216,21 @@
       <option name="project" value="LOCAL" />
       <updated>1526461142194</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Fixed Stuff">
+      <created>1526462188854</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1526462188855</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Fixed Stuff">
+      <created>1526462396075</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1526462396075</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -262,7 +276,8 @@
     <MESSAGE value="Fixed Typo" />
     <MESSAGE value="Corrected an unfortunate typography mishappen" />
     <MESSAGE value="Corrected an unfortunate typography mishappen once again" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrected an unfortunate typography mishappen once again" />
+    <MESSAGE value="Fixed Stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -309,8 +324,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="248" column="50" selection-start-line="248" selection-start-column="50" selection-end-line="248" selection-end-column="50" />
+        <state relative-caret-position="433">
+          <caret line="164" column="34" lean-forward="true" selection-start-line="164" selection-start-column="34" selection-end-line="164" selection-end-column="34" />
           <folding>
             <element signature="e#356#372#0" expanded="true" />
           </folding>

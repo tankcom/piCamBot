@@ -157,7 +157,7 @@ class piCamBot:
             pir_thread.start()
             threads.append(pir_thread)
 
-        self.commandIsNginxRunning()
+        self.commandIsNginxRunning(message)
 
         while True:
             time.sleep(1)
