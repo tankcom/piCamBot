@@ -157,6 +157,8 @@ class piCamBot:
             pir_thread.start()
             threads.append(pir_thread)
 
+        self.commandIsNginxRunning()
+
         while True:
             time.sleep(1)
             # check if all threads are still alive
@@ -241,7 +243,7 @@ class piCamBot:
         elif cmd == '/list':  # used for BotFather
             self.commandList(message)
         elif cmd == '/test':  # used for BotFather
-            self.commandIsNginxRunning(message)
+            self.commandIsNginxRunning()
         elif cmd == '/pic':
             # if motion software is running we have to stop and restart it for capturing images
             # no we dont, only losers use Raspistill
@@ -296,13 +298,21 @@ class piCamBot:
             message.reply_text('Loopback Already running')
             return
         message.reply_text('Enabling LoopBack')
-        args = ['ffmpeg', '-video_size', '1280x720',  '-i', '/dev/video0', '-vcodec', 'rawvideo', '-f', 'v4l2', '/dev/video1', '-vcodec',
-                'rawvideo', '-f', 'v4l2', '/dev/video3', '-vf',
-                "drawtext=fontfile=/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf: text='%{localtime\:%T}%{n}': fontcolor=white@0.8: x=7: y=700",
-                '-f', 'flv', '-vcodec', 'h264_omx', '-f', 'flv', 'rtmp://localhost:1935/hls/stream']  # hardcoded stream address, may be bad.
-            # ffmpeg streams the camera input video0 to video1, where motion is watching and video3, where the pic and vid command are watching
-            # it also streams hardware encoded h264 to rtmp://localhost:1935/hls/stream, where nginx needs to be listening before starting up
-            # ffmpeg needs to be compiled with h264_omx support, nginx needs to be compiled with the rtmp streamer module.
+        if self.IsNginxRunning: #check if nginx is running, if yes, ffmpeg can stream to rtmp, if not, it would crash.
+            args = ['ffmpeg', '-video_size', '1280x720',  '-i', '/dev/video0', '-vcodec', 'rawvideo', '-f', 'v4l2', '/dev/video1', '-vcodec',
+                    'rawvideo', '-f', 'v4l2', '/dev/video3', '-vf',
+                    "drawtext=fontfile=/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf: text='%{localtime\:%T}%{n}': fontcolor=white@0.8: x=7: y=700",
+                    '-f', 'flv', '-vcodec', 'h264_omx', '-f', 'flv', 'rtmp://localhost:1935/hls/stream']  # hardcoded stream address, may be bad.
+                # ffmpeg streams the camera input video0 to video1, where motion is watching and video3, where the pic and vid command are watching
+                # it also streams hardware encoded h264 to rtmp://localhost:1935/hls/stream, where nginx needs to be listening before starting up
+                # ffmpeg needs to be compiled with h264_omx support, nginx needs to be compiled with the rtmp streamer module.
+            message.reply_text('Nginx running, livestream available')
+        else: # if nginx is not running, start ffmpeg without livestreaming, and only with motion and manual capture capabilities
+            args = ['ffmpeg', '-video_size', '1280x720', '-i', '/dev/video0', '-vcodec', 'rawvideo', '-f', 'v4l2',
+                    '/dev/video1', '-vcodec',
+                    'rawvideo', '-f', 'v4l2', '/dev/video3', '-vf',
+                    "drawtext=fontfile=/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf: text='%{localtime\:%T}%{n}': fontcolor=white@0.8: x=7: y=700"]
+            message.reply_text('Nginx not running, livestream not available')
         try:
             self.pidLoopBack = subprocess.Popen(args).pid
             self.LoopBack = True  # set variable to quickly check if loopback is running, similar to self.armed
@@ -313,7 +323,7 @@ class piCamBot:
             message.reply_text('Error: Failed to start LoopBack software: %s' % str(e))
             return
 
-    def commandIsNginxRunning(self, message):
+    def commandIsNginxRunning(self):
         output = commands.getoutput('ps auxf')
         if 'nginx1.conf' in output:
             self.IsNginxRunning = True
