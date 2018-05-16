@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="322" column="65" lean-forward="true" selection-start-line="322" selection-start-column="65" selection-end-line="322" selection-end-column="65" />
+            <state relative-caret-position="500">
+              <caret line="322" column="56" selection-start-line="322" selection-start-column="56" selection-end-line="322" selection-end-column="56" />
               <folding>
                 <element signature="e#356#372#0" expanded="true" />
               </folding>
@@ -195,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526460563873</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fixed Typo">
+      <created>1526460878914</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1526460878914</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -237,9 +244,9 @@
     <MESSAGE value="Fixed automatically disabling LoopBack after disarming" />
     <MESSAGE value="Added automatically disabling motion after disabling Loopback" />
     <MESSAGE value="Fixed Status Command" />
-    <MESSAGE value="Fixed Typo" />
     <MESSAGE value="Added Check if Nginx is running" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Check if Nginx is running" />
+    <MESSAGE value="Fixed Typo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Typo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -284,8 +291,8 @@
     <entry file="file://$PROJECT_DIR$/motion_default.conf" />
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="322" column="65" lean-forward="true" selection-start-line="322" selection-start-column="65" selection-end-line="322" selection-end-column="65" />
+        <state relative-caret-position="500">
+          <caret line="322" column="56" selection-start-line="322" selection-start-column="56" selection-end-line="322" selection-end-column="56" />
           <folding>
             <element signature="e#356#372#0" expanded="true" />
           </folding>
