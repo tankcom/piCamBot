@@ -55,7 +55,7 @@ class piCamBot:
         # set Variable for checking if Nginx is running correctly
         self.IsNginxRunning = None
 
-    def run(self, message):
+    def run(self):
         # setup logging, we want to log both to stdout and a file
         logFormat = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         self.logger = logging.getLogger(__name__)
@@ -156,8 +156,6 @@ class piCamBot:
             pir_thread.daemon = True
             pir_thread.start()
             threads.append(pir_thread)
-
-        self.commandIsNginxRunning(message)
 
         while True:
             time.sleep(1)
@@ -297,6 +295,7 @@ class piCamBot:
         if self.LoopBack:
             message.reply_text('Loopback Already running')
             return
+        self.commandIsNginxRunning(message)
         message.reply_text('Enabling LoopBack')
         if self.IsNginxRunning: #check if nginx is running, if yes, ffmpeg can stream to rtmp, if not, it would crash.
             args = ['ffmpeg', '-video_size', '1280x720',  '-i', '/dev/video0', '-vcodec', 'rawvideo', '-f', 'v4l2', '/dev/video1', '-vcodec',
