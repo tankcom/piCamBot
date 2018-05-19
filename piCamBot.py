@@ -54,6 +54,8 @@ class piCamBot:
         self.motionLoopBack = None
         # set Variable for checking if Nginx is running correctly
         self.IsNginxRunning = None
+        # set variable for pid of nginx
+        self.pidNginx = None
 
     def run(self):
         # setup logging, we want to log both to stdout and a file
@@ -347,13 +349,25 @@ class piCamBot:
             message.reply_text('Nginx not running, nothing to do.')
             return
         message.reply_text('Killing Nginx')
+        if not self.pidNginx:
+            args = ['killall', 'nginx']
+            try:
+                subprocess.call(args)
+                self.IsNginxRunning = False
+                message.reply_text('Killed Nginx')
+                self.pidNginx = None  # set to None, to check later if nginx is running or not
+            except Exception as e:
+                self.logger.warn(str(e))
+                self.logger.warn(traceback.format_exc())
+                message.reply_text('Error: Failed to stop Nginx software: %s' % str(e))
+
 
         args = ['kill', str(self.pidNginx)]
         try:
             subprocess.call(args)
-            self.LoopBack = False
+            self.IsNginxRunning = False
             message.reply_text('Killed Nginx')
-            self.pidLoopBack = None  #set to None, to check later if loopback is running or not
+            self.pidNginx = None  #set to None, to check later if loopback is running or not
         except Exception as e:
             self.logger.warn(str(e))
             self.logger.warn(traceback.format_exc())
