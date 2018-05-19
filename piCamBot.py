@@ -242,6 +242,10 @@ class piCamBot:
             self.commandList(message)
         elif cmd == '/test':  # used for BotFather
             self.commandIsNginxRunning(message)
+        elif cmd == '/startnginx':
+            self.commandStartNginx(message)
+        elif cmd == '/stopnginx':
+            self.commandStopNginx(message)
         elif cmd == '/pic':
             # if motion software is running we have to stop and restart it for capturing images
             # no we dont, only losers use Raspistill
@@ -285,11 +289,15 @@ class piCamBot:
 
     def commandHelp(self, message):
         message.reply_text('/arm Start Motion Detection \n /disarm Stop Motion Detection \n /kill Forcefully Shutdown Motion \
-        \n /begin Start Vital Processes \n /stop Kill vital Processes for Video Capture \n /status Show Status \n /pic Capture Still Photo \n /vid n Capture Video with length n, default is 5s \n /help dis \n /list Show command list ready to paste into BotFathers /setcommands command')
+        \n /begin Start Vital Processes \n /stop Kill vital Processes for Video Capture \n /status Show Status \n /pic Capture Still Photo \
+        \n /vid n Capture Video with length n, default is 5s \n /help dis \
+        \n /list Show command list ready to paste into BotFathers /setcommands command \n /startnginx Starts software needed for livestream \
+        \n /stopnginx Stops software needed for livestream')
 
     def commandList(self, message):
         message.reply_text('Paste the following list after using the /setcommands command on the BotFather in Telegram to add them. Only necessary on First Configuration \n \n arm - Start Motion Detection \n disarm - Stop Motion Detection \n kill - Forcefully Shutdown Motion \
-        \n begin - Start Vital Processes \n stop - Kill vital Processes for Video Capture, reduces cpu load of piCamBot to 0 \n status - Show Status \n pic - Capture Still Photo \n vid  - Capture Video with custom length, default is 5  \n help - Display all Commands clickable')
+        \n begin - Start Vital Processes \n stop - Kill vital Processes for Video Capture, reduces cpu load of piCamBot to 0 \n status - Show Status \n pic - Capture Still Photo \n vid  - Capture Video with custom length, default is 5  \
+        \n startnginx - Starts software needed for livestream \n stopnginx - stops software needed for livestream \n help - Display all Commands clickable')
 
     def commandLoopBack(self, message):
         if self.LoopBack:
@@ -320,6 +328,36 @@ class piCamBot:
             self.logger.warn(str(e))
             self.logger.warn(traceback.format_exc())
             message.reply_text('Error: Failed to start LoopBack software: %s' % str(e))
+            return
+    def commandStartNginx(self, message):
+        if not self.IsNginxRunning:
+            args = ['sudo', '/usr/local/nginx/sbin/nginx', '-c', '/home/pi/piCamBot/nginx1.conf']
+            try:
+                self.pidNginx = subprocess.Popen(args).pid
+                self.IsNginxRunning = True
+                message.reply_text('Started nginx with pid {p}'.format(p=self.pidNginx))
+            except Exception as e:
+                self.logger.warn(str(e))
+                self.logger.warn(traceback.format_exc())
+                message.reply_text('Error: Failed to start nginx software: %s' % str(e))
+                return
+
+    def commandStopNginx(self, message):
+        if not self.IsNginxRunning:
+            message.reply_text('Nginx not running, nothing to do.')
+            return
+        message.reply_text('Killing Nginx')
+
+        args = ['kill', str(self.pidNginx)]
+        try:
+            subprocess.call(args)
+            self.LoopBack = False
+            message.reply_text('Killed Nginx')
+            self.pidLoopBack = None  #set to None, to check later if loopback is running or not
+        except Exception as e:
+            self.logger.warn(str(e))
+            self.logger.warn(traceback.format_exc())
+            message.reply_text('Error: Failed to stop Nginx software: %s' % str(e))
             return
 
     def commandIsNginxRunning(self, message):
