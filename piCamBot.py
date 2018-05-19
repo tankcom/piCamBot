@@ -358,17 +358,17 @@ class piCamBot:
                     self.logger.warn(traceback.format_exc())
             return
         message.reply_text('Killing Nginx')
-        if not self.pidNginx:
-            args = ['sudo', 'killall', 'nginx']
-            try:
-                subprocess.call(args)
-                self.IsNginxRunning = False
-                message.reply_text('Killed Nginx')
-                self.pidNginx = None  # set to None, to check later if nginx is running or not
-            except Exception as e:
-                self.logger.warn(str(e))
-                self.logger.warn(traceback.format_exc())
-                message.reply_text('Error: Failed to stop Nginx software: %s' % str(e))
+
+        args = ['sudo', 'killall', 'nginx']
+        try:
+            subprocess.call(args)
+            self.IsNginxRunning = False
+            message.reply_text('Killed Nginx')
+            self.pidNginx = None  # set to None, to check later if nginx is running or not
+        except Exception as e:
+            self.logger.warn(str(e))
+            self.logger.warn(traceback.format_exc())
+            message.reply_text('Error: Failed to stop Nginx software: %s' % str(e))
 
 
         args = ['kill', str(self.pidNginx)]
