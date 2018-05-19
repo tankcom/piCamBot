@@ -350,7 +350,7 @@ class piCamBot:
             return
         message.reply_text('Killing Nginx')
         if not self.pidNginx:
-            args = ['killall', 'nginx']
+            args = ['sudo', 'killall', 'nginx']
             try:
                 subprocess.call(args)
                 self.IsNginxRunning = False
