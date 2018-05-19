@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="355" column="35" selection-start-line="355" selection-start-column="35" selection-end-line="355" selection-end-column="35" />
+            <state relative-caret-position="274">
+              <caret line="357" column="60" selection-start-line="357" selection-start-column="60" selection-end-line="357" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -247,7 +247,21 @@
       <option name="project" value="LOCAL" />
       <updated>1526728097556</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="fixed nginx control">
+      <created>1526728963220</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1526728963220</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fixed nginx control">
+      <created>1526729157675</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1526729157675</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -295,7 +309,8 @@
     <MESSAGE value="Corrected an unfortunate typography mishappen once again" />
     <MESSAGE value="Fixed Stuff" />
     <MESSAGE value="Added control of nginx into the bot" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added control of nginx into the bot" />
+    <MESSAGE value="fixed nginx control" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed nginx control" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -343,8 +358,8 @@
     <entry file="file://$PROJECT_DIR$/motion_default.conf" />
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="355" column="35" selection-start-line="355" selection-start-column="35" selection-end-line="355" selection-end-column="35" />
+        <state relative-caret-position="274">
+          <caret line="357" column="60" selection-start-line="357" selection-start-column="60" selection-end-line="357" selection-end-column="60" />
         </state>
       </provider>
     </entry>

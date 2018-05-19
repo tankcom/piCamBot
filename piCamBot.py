@@ -347,6 +347,15 @@ class piCamBot:
     def commandStopNginx(self, message):
         if not self.IsNginxRunning:
             message.reply_text('Nginx not running, nothing to do.')
+            if not self.pidNginx:
+                args = ['sudo', 'killall', 'nginx']
+                try:
+                    subprocess.call(args)
+                    self.IsNginxRunning = False
+                    self.pidNginx = None  # set to None, to check later if nginx is running or not
+                except Exception as e:
+                    self.logger.warn(str(e))
+                    self.logger.warn(traceback.format_exc())
             return
         message.reply_text('Killing Nginx')
         if not self.pidNginx:
