@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="357" column="60" selection-start-line="357" selection-start-column="60" selection-end-line="357" selection-end-column="60" />
+            <state relative-caret-position="338">
+              <caret line="313" column="85" selection-start-line="313" selection-start-column="85" selection-end-line="313" selection-end-column="85" />
             </state>
           </provider>
         </entry>
@@ -32,6 +32,7 @@
       <find>Video</find>
       <find>thread</find>
       <find>pid</find>
+      <find>ffmpeg</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -55,17 +56,15 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="725" />
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1920" />
+    <option name="height" value="1080" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -77,6 +76,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -97,7 +97,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="piCamBot" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="piCamBot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="piCamBot" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -116,6 +116,11 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.piCamBot" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -184,110 +189,47 @@
       <option name="project" value="LOCAL" />
       <updated>1525596886044</updated>
     </task>
-    <task id="LOCAL-00009" summary="Added Check if Nginx is running">
-      <created>1526460563873</created>
+    <task id="LOCAL-00009" summary="Fixed Typo">
+      <created>1525597144230</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1526460563873</updated>
+      <updated>1525597144230</updated>
     </task>
     <task id="LOCAL-00010" summary="Fixed Typo">
-      <created>1526460878914</created>
+      <created>1525597434014</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1526460878914</updated>
+      <updated>1525597434014</updated>
     </task>
-    <task id="LOCAL-00011" summary="Corrected an unfortunate typography mishappen">
-      <created>1526461030689</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1526461030689</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Corrected an unfortunate typography mishappen once again">
-      <created>1526461142194</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1526461142194</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Fixed Stuff">
-      <created>1526462188854</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1526462188855</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Fixed Stuff">
-      <created>1526462396075</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1526462396075</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Fixed Stuff">
-      <created>1526462513382</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1526462513382</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Fixed Stuff">
-      <created>1526462558232</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1526462558232</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Added control of nginx into the bot">
-      <created>1526728097556</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1526728097556</updated>
-    </task>
-    <task id="LOCAL-00018" summary="fixed nginx control">
-      <created>1526728963220</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1526728963220</updated>
-    </task>
-    <task id="LOCAL-00019" summary="fixed nginx control">
-      <created>1526729157675</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1526729157675</updated>
-    </task>
-    <option name="localTasksCounter" value="20" />
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49331552" visible="true" weight="0.1484375" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32976654" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.328877" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.5066845" side_tool="true" visible="true" weight="0.1484375" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32976654" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49637306" visible="true" weight="0.10294118" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.50362694" side_tool="true" visible="true" weight="0.10294118" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.28704664" />
     </layout>
   </component>
@@ -303,14 +245,8 @@
     <MESSAGE value="Fixed automatically disabling LoopBack after disarming" />
     <MESSAGE value="Added automatically disabling motion after disabling Loopback" />
     <MESSAGE value="Fixed Status Command" />
-    <MESSAGE value="Added Check if Nginx is running" />
     <MESSAGE value="Fixed Typo" />
-    <MESSAGE value="Corrected an unfortunate typography mishappen" />
-    <MESSAGE value="Corrected an unfortunate typography mishappen once again" />
-    <MESSAGE value="Fixed Stuff" />
-    <MESSAGE value="Added control of nginx into the bot" />
-    <MESSAGE value="fixed nginx control" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed nginx control" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Typo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -320,29 +256,15 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2400">
-          <caret line="160" lean-forward="true" selection-start-line="160" selection-end-line="160" />
+        <state relative-caret-position="3196">
+          <caret line="204" column="8" selection-start-line="204" selection-start-column="8" selection-end-line="204" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3859">
-          <caret line="227" column="80" selection-start-line="227" selection-start-column="80" selection-end-line="227" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/piCamBot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3450">
-          <caret line="230" column="43" selection-start-line="230" selection-start-column="43" selection-end-line="230" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/piCamBot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6765">
-          <caret line="451" column="26" lean-forward="true" selection-start-line="451" selection-start-column="26" selection-end-line="451" selection-end-column="26" />
+        <state relative-caret-position="3468">
+          <caret line="204" column="8" selection-start-line="204" selection-start-column="8" selection-end-line="204" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -355,11 +277,12 @@
     <entry file="file://$PROJECT_DIR$/piCamBot.py" />
     <entry file="file://$PROJECT_DIR$/config_default.json" />
     <entry file="file://$PROJECT_DIR$/motion_default.conf" />
+    <entry file="file://$PROJECT_DIR$/config_default.json" />
     <entry file="file://$PROJECT_DIR$/motion_default.conf" />
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="357" column="60" selection-start-line="357" selection-start-column="60" selection-end-line="357" selection-end-column="60" />
+        <state relative-caret-position="338">
+          <caret line="313" column="85" selection-start-line="313" selection-start-column="85" selection-end-line="313" selection-end-column="85" />
         </state>
       </provider>
     </entry>
