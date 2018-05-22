@@ -44,7 +44,7 @@
     "//": "motion-related settings (for motion detection via camera)",
     "motion": {
 	"//": "enable motion detection via camera?",
-	"enable": false,
+	"enable": true,
 
         "//": "pid file for stopping the motion daemon (process_id_file setting)",
         "pid_file": "/tmp/motion/motion.pid",
@@ -72,7 +72,7 @@
         "//": "command for creating a snapshot",
 	"//": "note: the resulting image should be located outside the usual image_dir,",
 	"//": "      otherwise it gets ignored while motion tracking is disabled",
-        "cmd": ""ffmpeg -i /dev/video3 -t {vid_len} -vcodec mpeg4 /tmp/piCamBot.mp4"",
+        "cmd": ""ffmpeg -i /dev/video3 -t {vid_len} -vcodec h264_omx -b:v 3000k /tmp/piCamBot.mp4"",
 
         "//": "where to find the image after capturing",
         "file": "/tmp/piCamBot.mp4"

@@ -248,6 +248,12 @@ class piCamBot:
             self.commandStartNginx(message)
         elif cmd == '/stopnginx':
             self.commandStopNginx(message)
+            if self.armed:
+               self.commandArm(message)
+            if not self.armed:
+                if self.isLoopBackRunning():
+                    self.commandLoopBack(message)
+
         elif cmd == '/pic':
             # if motion software is running we have to stop and restart it for capturing images
             # no we dont, only losers use Raspistill
@@ -311,7 +317,7 @@ class piCamBot:
             args = ['ffmpeg', '-video_size', '1280x720',  '-i', '/dev/video0', '-vcodec', 'rawvideo', '-f', 'v4l2', '/dev/video1', '-vcodec',
                     'rawvideo', '-f', 'v4l2', '/dev/video3', '-vf',
                     "drawtext=fontfile=/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf: text='%{localtime\:%T}%{n}': fontcolor=white@0.8: x=7: y=700",
-                    '-f', 'flv', '-vcodec', 'h264_omx', '-f', 'flv', '-b:v', '1200k', 'rtmp://localhost:1935/hls/stream']  # hardcoded stream address, may be bad.
+                    '-f', 'flv', '-vcodec', 'h264_omx', '-f', 'flv', '-b:v', '2000k', 'rtmp://localhost:1935/hls/stream']  # hardcoded stream address, may be bad.
                 # ffmpeg streams the camera input video0 to video1, where motion is watching and video3, where the pic and vid command are watching
                 # it also streams hardware encoded h264 to rtmp://localhost:1935/hls/stream, where nginx needs to be listening before starting up
                 # ffmpeg needs to be compiled with h264_omx support, nginx needs to be compiled with the rtmp streamer module.
@@ -343,6 +349,7 @@ class piCamBot:
                 self.logger.warn(traceback.format_exc())
                 message.reply_text('Error: Failed to start nginx software: %s' % str(e))
                 return
+        message.reply_text('Nginx Already running')
 
     def commandStopNginx(self, message):
         if not self.IsNginxRunning:
