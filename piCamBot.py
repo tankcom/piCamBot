@@ -152,7 +152,7 @@ class piCamBot:
         image_watch_thread.start()
         threads.append(image_watch_thread)
 
-        # arm
+        # start loopback and nginx
 
         self.commandStartNginxLite()
         self.commandLoopBackLite()
@@ -346,7 +346,7 @@ class piCamBot:
     def commandLoopBackLite(self):
         if self.LoopBack:
             return
-        self.commandIsNginxRunning()
+        self.commandIsNginxRunning(message)
         if self.IsNginxRunning: #check if nginx is running, if yes, ffmpeg can stream to rtmp, if not, it would crash.
             args = ['ffmpeg', '-video_size', '1280x720',  '-i', '/dev/video0', '-vcodec', 'rawvideo', '-f', 'v4l2', '/dev/video1', '-vcodec',
                     'rawvideo', '-f', 'v4l2', '/dev/video3', '-vf',
