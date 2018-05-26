@@ -170,7 +170,7 @@ class piCamBot:
             for thread in threads:
                 if thread.isAlive():
                     continue
-
+                subprocess.Popen("sleep", ["5"])
                 # something went wrong, bailing out
                 msg = 'Thread "%s" died, terminating now.' % thread.name
                 self.logger.error(msg)
