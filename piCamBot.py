@@ -761,7 +761,7 @@ class piCamBot:
         #self.GPIO.setmode(self.GPIO.BOARD)
         #self.GPIO.setup(gpio, self.GPIO.IN)
         while True:
-            args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/data/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx /tmp/piCamBot/a2.mp4"]
+            args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/data/*jpg | sed 's/^/file /') -vf format=yuv420p -c copy /tmp/piCamBot/a2.mp4"]
             # args = ['echo' 'kek']
             try:
                 subprocess.Popen(args)
