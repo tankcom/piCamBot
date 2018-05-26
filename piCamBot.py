@@ -346,7 +346,7 @@ class piCamBot:
     def commandLoopBackLite(self):
         if self.LoopBack:
             return
-        self.commandIsNginxRunning(message)
+        self.commandIsNginxRunningLite()
         if self.IsNginxRunning: #check if nginx is running, if yes, ffmpeg can stream to rtmp, if not, it would crash.
             args = ['ffmpeg', '-video_size', '1280x720',  '-i', '/dev/video0', '-vcodec', 'rawvideo', '-f', 'v4l2', '/dev/video1', '-vcodec',
                     'rawvideo', '-f', 'v4l2', '/dev/video3', '-vf',
@@ -440,6 +440,13 @@ class piCamBot:
         else:
             self.IsNginxRunning = False
             message.reply_text('Nginx is notRunning {p}'.format(p=self.IsNginxRunning))
+
+    def commandIsNginxRunningLite(self):
+        output = commands.getoutput('ps auxf')
+        if 'nginx1.conf' in output:
+            self.IsNginxRunning = True
+        else:
+            self.IsNginxRunning = False
 
     def commandNoLoopBack(self, message):
         if not self.LoopBack:
