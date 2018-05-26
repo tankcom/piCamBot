@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="172" column="47" lean-forward="true" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
+            <state relative-caret-position="319">
+              <caret line="717" column="51" selection-start-line="717" selection-start-column="51" selection-end-line="717" selection-end-column="51" />
             </state>
           </provider>
         </entry>
@@ -42,6 +42,7 @@
       <find>thread</find>
       <find>pid</find>
       <find>ffmpeg</find>
+      <find>tmp</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -339,8 +340,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="172" column="47" lean-forward="true" selection-start-line="172" selection-start-column="47" selection-end-line="172" selection-end-column="47" />
+        <state relative-caret-position="319">
+          <caret line="717" column="51" selection-start-line="717" selection-start-column="51" selection-end-line="717" selection-end-column="51" />
         </state>
       </provider>
     </entry>
