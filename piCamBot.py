@@ -190,8 +190,15 @@ class piCamBot:
             try:
                 subprocess.Popen(args, stderr='/dev/null', stdout='/dev/null')
                 print('LELELELELELELELEL')
-            except Exception:
-                print('KOKOKOKOKOKOKOKOKOKOKOKOKOKOK')
+            except Exception as e:
+                print(e)
+                print(e)
+                print(e)
+                print(e)
+                print(e)
+                print(e)
+                print(e)
+                print(e)
                 pass
             shutil.rmtree('/tmp/piCamBot/video/data', ignore_errors=True)
             os.mkdir('/tmp/piCamBot/video/data')
