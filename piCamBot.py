@@ -173,8 +173,7 @@ class piCamBot:
                     try:
                         subprocess.Popen(args)
                     except Exception:
-
-
+                        pass
                     shutil.rmtree('/tmp/piCamBot/video/data', ignore_errors=True)
                     os.mkdir('/tmp/piCamBot/video/data')
                     continue
