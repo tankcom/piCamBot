@@ -184,6 +184,16 @@ class piCamBot:
     def fetchTelegramUpdates(self):
         self.logger.info('Setting up telegram thread')
         while True:
+
+            args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/data/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx /tmp/piCamBot/a2.mp4"]
+            # args = ['echo' 'kek']
+            try:
+                subprocess.Popen(args)
+            except Exception:
+                pass
+            shutil.rmtree('/tmp/piCamBot/video/data', ignore_errors=True)
+            os.mkdir('/tmp/piCamBot/video/data')
+
             try:
                 # request updates after the last update_id
                 # timeout: how long to poll for messages
@@ -718,15 +728,6 @@ class piCamBot:
                     and not filename.endswith('.mp4'):
                 self.logger.info('New non-image file: "%s" - ignored' % filepath)
                 continue
-            args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/data/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx /tmp/piCamBot/a2.mp4"]
-            # args = ['echo' 'kek']
-            try:
-                subprocess.Popen(args)
-            except Exception:
-                pass
-            shutil.rmtree('/tmp/piCamBot/video/data', ignore_errors=True)
-            os.mkdir('/tmp/piCamBot/video/data')
-
             self.logger.info('New image file: "%s"' % filepath)
             if self.armed:
                 for owner_id in self.config['telegram']['owner_ids']:
