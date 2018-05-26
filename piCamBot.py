@@ -777,10 +777,16 @@ class piCamBot:
                 print(e)
                 print(e)
                 pass
-            shutil.rmtree('/tmp/piCamBot/video/data', ignore_errors=True)
-            os.makedirs('/tmp/piCamBot/video/data')
-
-
+            try:
+                shutil.rmtree('/tmp/piCamBot/video/data', ignore_errors=True)
+            except Exception as e:
+                print(e)
+                print ('PPPPPPPPPPPPPPPPPPPPPPPPPPPPPP')
+            try:
+                os.makedirs('/tmp/piCamBot/video/data')
+            except Exception as e:
+                print(e)
+                print('AAAaaaasssAAAAAAAAAAAAAAAAAAA')
     def playSequence(self, sequence):
         gpio = self.config['buzzer']['gpio']
         duration = self.config['buzzer']['duration']
