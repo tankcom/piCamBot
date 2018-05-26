@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="717" column="51" selection-start-line="717" selection-start-column="51" selection-end-line="717" selection-end-column="51" />
+            <state relative-caret-position="299">
+              <caret line="717" column="44" selection-start-line="717" selection-start-column="44" selection-end-line="717" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -234,7 +234,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527352662075</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="video stuff">
+      <created>1527361704940</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1527361704940</updated>
+    </task>
+    <task id="LOCAL-00015" summary="video stuff">
+      <created>1527363319192</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1527363319192</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -278,7 +292,8 @@
     <MESSAGE value="Fixed Status Command" />
     <MESSAGE value="Fixed Typo" />
     <MESSAGE value="added auto arming" />
-    <option name="LAST_COMMIT_MESSAGE" value="added auto arming" />
+    <MESSAGE value="video stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="video stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -340,8 +355,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="717" column="51" selection-start-line="717" selection-start-column="51" selection-end-line="717" selection-end-column="51" />
+        <state relative-caret-position="299">
+          <caret line="717" column="44" selection-start-line="717" selection-start-column="44" selection-end-line="717" selection-end-column="44" />
         </state>
       </provider>
     </entry>
