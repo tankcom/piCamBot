@@ -718,7 +718,7 @@ class piCamBot:
                     and not filename.endswith('.mp4'):
                 self.logger.info('New non-image file: "%s" - ignored' % filepath)
                 continue
-             args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/data/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx /tmp/piCamBot/a2.mp4"]
+            args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/data/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx /tmp/piCamBot/a2.mp4"]
             # args = ['echo' 'kek']
             try:
                 subprocess.Popen(args)
