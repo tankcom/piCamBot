@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="195" column="24" lean-forward="true" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
+            <state relative-caret-position="233">
+              <caret line="766" column="38" lean-forward="true" selection-start-line="766" selection-start-column="38" selection-end-line="766" selection-end-column="38" />
               <folding>
                 <element signature="e#356#372#0" expanded="true" />
               </folding>
@@ -48,6 +48,8 @@
       <find>tmp</find>
       <find>commands</find>
       <find>commands.</find>
+      <find>While True</find>
+      <find>watchpir</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -386,7 +388,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527370822465</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="bad practice">
+      <created>1527371118885</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1527371118885</updated>
+    </task>
+    <task id="LOCAL-00036" summary="bad practice">
+      <created>1527371375073</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1527371375073</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -498,8 +514,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="195" column="24" lean-forward="true" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
+        <state relative-caret-position="233">
+          <caret line="766" column="38" lean-forward="true" selection-start-line="766" selection-start-column="38" selection-end-line="766" selection-end-column="38" />
           <folding>
             <element signature="e#356#372#0" expanded="true" />
           </folding>

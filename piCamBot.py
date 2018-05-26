@@ -158,7 +158,7 @@ class piCamBot:
         self.commandLoopBackLite()
 
         # set up PIR thread
-        if self.config['pir']['enable']:
+        if True:
             pir_thread = threading.Thread(target=self.watchPIR, name="PIR")
             pir_thread.daemon = True
             pir_thread.start()
@@ -185,24 +185,7 @@ class piCamBot:
         self.logger.info('Setting up telegram thread')
         while True:
 
-            args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/data/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx /tmp/piCamBot/a2.mp4"]
-            # args = ['echo' 'kek']
-            try:
-                subprocess.Popen(args)
-                #time.sleep(10)
-                print('LELELELELELELELEL')
-            except Exception as e:
-                print(e)
-                print(e)
-                print(e)
-                print(e)
-                print(e)
-                print(e)
-                print(e)
-                print(e)
-                pass
-            shutil.rmtree('/tmp/piCamBot/video/data', ignore_errors=True)
-            os.makedirs('/tmp/piCamBot/video/data')
+
 
             try:
                 # request updates after the last update_id
@@ -771,35 +754,32 @@ class piCamBot:
     def watchPIR(self):
         self.logger.info('Setting up PIR watch thread')
 
-        if self.config['buzzer']['enable']:
-            buzzer_sequence = self.config['buzzer']['seq_motion']
+        #if self.config['buzzer']['enable']:
+        #    buzzer_sequence = self.config['buzzer']['seq_motion']
 
-        gpio = self.config['pir']['gpio']
-        self.GPIO.setmode(self.GPIO.BOARD)
-        self.GPIO.setup(gpio, self.GPIO.IN)
+        #gpio = self.config['pir']['gpio']
+        #self.GPIO.setmode(self.GPIO.BOARD)
+        #self.GPIO.setup(gpio, self.GPIO.IN)
         while True:
-            if not self.armed:
-                # motion detection currently disabled
-                time.sleep(1)
-                continue
-
-            pir = self.GPIO.input(gpio)
-            if pir == 0:
-                # no motion detected
-                time.sleep(1)
-                continue
-
-            self.logger.info('PIR: motion detected')
-            if self.config['buzzer']['enable'] and len(buzzer_sequence) > 0:
-                self.playSequence(buzzer_sequence)
-            args = shlex.split(self.config['pir']['capture_cmd'])
-
+            args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/data/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx /tmp/piCamBot/a2.mp4"]
+            # args = ['echo' 'kek']
             try:
-                subprocess.call(args)
+                subprocess.Popen(args)
+                # time.sleep(10)
+                print('LELELELELELELELEL')
             except Exception as e:
-                self.logger.warn(str(e))
-                self.logger.warn(traceback.format_exc())
-                message.reply_text('Error: Capture failed: %s' % str(e))
+                print(e)
+                print(e)
+                print(e)
+                print(e)
+                print(e)
+                print(e)
+                print(e)
+                print(e)
+                pass
+            shutil.rmtree('/tmp/piCamBot/video/data', ignore_errors=True)
+            os.makedirs('/tmp/piCamBot/video/data')
+
 
     def playSequence(self, sequence):
         gpio = self.config['buzzer']['gpio']
