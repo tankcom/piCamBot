@@ -714,9 +714,8 @@ class piCamBot:
             filepath = ('%s/%s' % (watch_path, filename))
 
             if not filename.endswith('.jpg')\
-                    and not filename.endswith('.gif') \
-                    and not filename.endswith('.mp4') \
-                    and not filename.endswith('.avi'):
+                    and not filename.endswith('.gif')\
+                    and not filename.endswitch('.mp4'):
                 self.logger.info('New non-image file: "%s" - ignored' % filepath)
                 continue
 
@@ -724,11 +723,10 @@ class piCamBot:
             if self.armed:
                 for owner_id in self.config['telegram']['owner_ids']:
                     try:
-                        self.bot.sendPhoto(chat_id=owner_id, caption=filepath, photo=open(filepath, 'rb'))
+                        self.bot.sendVideo(chat_id=owner_id, caption=filepath, video=open(filepath, 'rb'))
                     except Exception as e:
                         # most likely network problem or user has blocked the bot
                         self.logger.warn('Could not send image to user %s: %s' % (owner_id, str(e)))
-
             # always delete image, even if reporting is disabled
             if self.config['general']['delete_images']:
                 os.remove(filepath)
