@@ -170,7 +170,10 @@ class piCamBot:
             for thread in threads:
                 if thread.isAlive():
                     continue
-                subprocess.Popen("sleep", ["5"])
+                args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/data/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx /tmp/piCamBot/a2.mp4"]
+                subprocess.Popen(args)
+                shutil.rmtree('/tmp/piCamBot/video/data')
+                os.mkdir('/tmp/piCamBot/video/data')
                 # something went wrong, bailing out
                 msg = 'Thread "%s" died, terminating now.' % thread.name
                 self.logger.error(msg)
