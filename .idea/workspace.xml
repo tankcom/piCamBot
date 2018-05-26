@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="203" column="50" selection-start-line="203" selection-start-column="50" selection-end-line="203" selection-end-column="50" />
+            <state relative-caret-position="301">
+              <caret line="195" column="24" lean-forward="true" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
               <folding>
                 <element signature="e#356#372#0" expanded="true" />
               </folding>
@@ -372,7 +372,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527370217843</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="bad practice">
+      <created>1527370569308</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1527370569308</updated>
+    </task>
+    <task id="LOCAL-00034" summary="bad practice">
+      <created>1527370822465</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1527370822465</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -484,8 +498,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="203" column="50" selection-start-line="203" selection-start-column="50" selection-end-line="203" selection-end-column="50" />
+        <state relative-caret-position="301">
+          <caret line="195" column="24" lean-forward="true" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
           <folding>
             <element signature="e#356#372#0" expanded="true" />
           </folding>
