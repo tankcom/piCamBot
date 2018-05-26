@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
 # dependencies:
@@ -201,7 +201,7 @@ class piCamBot:
                 print(e)
                 pass
             shutil.rmtree('/tmp/piCamBot/video/data', ignore_errors=True)
-            os.makedirs('/tmp/piCamBot/video/data', exist_ok=True)
+            os.makedirs('/tmp/piCamBot/video/data')
 
             try:
                 # request updates after the last update_id

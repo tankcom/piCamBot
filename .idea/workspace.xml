@@ -17,8 +17,11 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="203" column="66" lean-forward="true" selection-start-line="203" selection-start-column="66" selection-end-line="203" selection-end-column="66" />
+            <state relative-caret-position="300">
+              <caret line="203" column="50" selection-start-line="203" selection-start-column="50" selection-end-line="203" selection-end-column="50" />
+              <folding>
+                <element signature="e#356#372#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -43,6 +46,8 @@
       <find>pid</find>
       <find>ffmpeg</find>
       <find>tmp</find>
+      <find>commands</find>
+      <find>commands.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -353,7 +358,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527369578849</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="bad practice">
+      <created>1527369991117</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1527369991117</updated>
+    </task>
+    <task id="LOCAL-00032" summary="bad practice">
+      <created>1527370217843</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1527370217843</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -412,6 +431,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6525">
           <caret line="435" column="13" selection-start-line="435" selection-start-column="13" selection-end-line="435" selection-end-column="13" />
+          <folding>
+            <element signature="e#356#372#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -462,8 +484,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="203" column="66" lean-forward="true" selection-start-line="203" selection-start-column="66" selection-end-line="203" selection-end-column="66" />
+        <state relative-caret-position="300">
+          <caret line="203" column="50" selection-start-line="203" selection-start-column="50" selection-end-line="203" selection-end-column="50" />
+          <folding>
+            <element signature="e#356#372#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
