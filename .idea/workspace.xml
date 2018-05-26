@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="172" column="39" selection-start-line="172" selection-start-column="39" selection-end-line="172" selection-end-column="39" />
+            <state relative-caret-position="491">
+              <caret line="726" column="26" selection-start-line="726" selection-start-column="26" selection-end-line="726" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -290,7 +290,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527366978381</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="bad practice">
+      <created>1527367352740</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1527367352740</updated>
+    </task>
+    <task id="LOCAL-00023" summary="bad practice">
+      <created>1527367607811</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1527367607811</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -399,8 +413,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="172" column="39" selection-start-line="172" selection-start-column="39" selection-end-line="172" selection-end-column="39" />
+        <state relative-caret-position="491">
+          <caret line="726" column="26" selection-start-line="726" selection-start-column="26" selection-end-line="726" selection-end-column="26" />
         </state>
       </provider>
     </entry>
