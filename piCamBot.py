@@ -201,7 +201,7 @@ class piCamBot:
                 print(e)
                 pass
             shutil.rmtree('/tmp/piCamBot/video/data', ignore_errors=True)
-            os.mkdir('/tmp/piCamBot/video/data')
+            os.makedirs('/tmp/piCamBot/video/data', exist_ok=True)
 
             try:
                 # request updates after the last update_id
