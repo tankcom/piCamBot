@@ -189,8 +189,9 @@ class piCamBot:
             # args = ['echo' 'kek']
             try:
                 subprocess.Popen(args, stderr='/dev/null', stdout='/dev/null')
+                print('LELELELELELELELEL')
             except Exception:
-                print('kek')
+                print('KOKOKOKOKOKOKOKOKOKOKOKOKOKOK')
                 pass
             shutil.rmtree('/tmp/piCamBot/video/data', ignore_errors=True)
             os.mkdir('/tmp/piCamBot/video/data')
