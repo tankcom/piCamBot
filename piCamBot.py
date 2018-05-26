@@ -189,7 +189,7 @@ class piCamBot:
             # args = ['echo' 'kek']
             try:
                 subprocess.Popen(args)
-                time.sleep(10)
+                #time.sleep(10)
                 print('LELELELELELELELEL')
             except Exception as e:
                 print(e)
