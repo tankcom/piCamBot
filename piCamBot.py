@@ -776,7 +776,7 @@ class piCamBot:
 
                 for f in files:                 #move every file to dest
                     if (f.endswith(".jpg")):
-                        shutil.move(f, dest)
+                        shutil.move("/tmp/piCamBot/video/data/" + f, dest)
                 self.isPictureMoved = True
             isNotEmpty2 = os.listdir('/tmp/piCamBot/video/tmp')
             if self.isPictureMoved and isNotEmpty2: #only execute if pictures have been moved and the input folder is not empty
