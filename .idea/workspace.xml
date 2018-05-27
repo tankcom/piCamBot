@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="553">
-              <caret line="796" column="41" lean-forward="true" selection-start-line="796" selection-start-column="41" selection-end-line="796" selection-end-column="41" />
+            <state relative-caret-position="346">
+              <caret line="782" column="164" selection-start-line="782" selection-start-column="164" selection-end-line="782" selection-end-column="164" />
               <folding>
                 <element signature="e#356#372#0" expanded="true" />
               </folding>
@@ -453,7 +453,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527444798916</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="changed the way videos are created">
+      <created>1527445082470</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1527445082470</updated>
+    </task>
+    <task id="LOCAL-00045" summary="changed the way videos are created">
+      <created>1527445572004</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1527445572004</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -464,9 +478,9 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32976654" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.328877" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32810616" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.50542825" side_tool="true" visible="true" weight="0.14632736" />
+      <window_info id="Structure" order="1" sideWeight="0.50542825" side_tool="true" visible="true" weight="0.14632736" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -566,8 +580,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="553">
-          <caret line="796" column="41" lean-forward="true" selection-start-line="796" selection-start-column="41" selection-end-line="796" selection-end-column="41" />
+        <state relative-caret-position="346">
+          <caret line="782" column="164" selection-start-line="782" selection-start-column="164" selection-end-line="782" selection-end-column="164" />
           <folding>
             <element signature="e#356#372#0" expanded="true" />
           </folding>
