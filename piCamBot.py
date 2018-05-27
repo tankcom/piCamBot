@@ -794,7 +794,7 @@ class piCamBot:
             if ffmpegHasFinished:
                 self.ffmpegrunning = False
                 try:
-                    shutil.move('/tmp/piCamBot/video/tmp4/a2.mp4', '/tmp/piCambot/a2.mp4')
+                    shutil.move('/tmp/piCamBot/video/tmp4/a2.mp4', '/tmp/piCambot/')
                 except Exception as e:
                     print(e)
                     pass
