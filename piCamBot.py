@@ -772,7 +772,7 @@ class piCamBot:
                 files = os.listdir(source) # make list of all jpegs in direcory
 
                 for f in files:                 #move every file to dest
-                    if (f.endswith(".jpg"))
+                    if (f.endswith(".jpg")):
                         shutil.move(f, dest)
                 self.isPictureMoved = True
             isNotEmpty2 = os.listdir('/tmp/piCamBot/video/tmp')
