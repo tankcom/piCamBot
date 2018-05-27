@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="782" column="164" selection-start-line="782" selection-start-column="164" selection-end-line="782" selection-end-column="164" />
+            <state relative-caret-position="512">
+              <caret line="793" column="42" selection-start-line="793" selection-start-column="42" selection-end-line="793" selection-end-column="42" />
               <folding>
                 <element signature="e#356#372#0" expanded="true" />
               </folding>
@@ -467,7 +467,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527445572004</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="changed the way videos are created">
+      <created>1527445711194</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1527445711194</updated>
+    </task>
+    <task id="LOCAL-00047" summary="changed the way videos are created">
+      <created>1527446130440</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1527446130440</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -580,8 +594,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="782" column="164" selection-start-line="782" selection-start-column="164" selection-end-line="782" selection-end-column="164" />
+        <state relative-caret-position="512">
+          <caret line="793" column="42" selection-start-line="793" selection-start-column="42" selection-end-line="793" selection-end-column="42" />
           <folding>
             <element signature="e#356#372#0" expanded="true" />
           </folding>

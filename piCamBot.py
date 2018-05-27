@@ -765,6 +765,7 @@ class piCamBot:
         os.makedirs('/tmp/piCamBot/video/tmp')
         os.makedirs('/tmp/piCamBot/video/tmp4')
         os.makedirs('/tmp/piCamBot/video/data')
+        self.ffmpegrunning = False
         while True:
             isNotEmpty = os.listdir('/tmp/piCamBot/video/data')
             if not self.isPictureMoved and isNotEmpty: # only execute if ffmpeg is ready and there are pictures to move
@@ -779,7 +780,8 @@ class piCamBot:
                         shutil.move("/tmp/piCamBot/video/data/" + f, dest)
                 self.isPictureMoved = True
             isNotEmpty2 = os.listdir('/tmp/piCamBot/video/tmp')
-            if self.isPictureMoved and isNotEmpty2: #only execute if pictures have been moved and the input folder is not empty
+            if self.isPictureMoved and isNotEmpty2 and not self.ffmpegrunning: #only execute if pictures have been moved and the input folder is not empty
+                self.ffmpegrunning = True
                 args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/tmp/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx /tmp/piCamBot/video/tmp4/a2.mp4"]
                 try:
                     subprocess.Popen(args)
@@ -789,6 +791,7 @@ class piCamBot:
                     pass
             ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
             if ffmpegHasFinished:
+                self.ffmpegrunning = False
                 try:
                     shutil.move('/tmp/piCamBot/video/tmp4/a2.mp4', '/tmp/piCambot/a2.mp4')
                 except Exception as e:
