@@ -762,6 +762,7 @@ class piCamBot:
         #self.GPIO.setup(gpio, self.GPIO.IN)
         os.makedirs('/tmp/piCamBot/video/tmp')
         os.makedirs('/tmp/piCamBot/video/tmp4')
+        os.makedirs('/tmp/piCamBot/video/data')
         while True:
             isNotEmpty = os.listdir('/tmp/piCamBot/video/data')
             if not self.isPictureMoved and isNotEmpty: # only execute if ffmpeg is ready and there are pictures to move
@@ -786,7 +787,11 @@ class piCamBot:
                     pass
             ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
             if ffmpegHasFinished:
-                shutil.move('/tmp/piCamBot/video/tmp4/a2.mp4', '/tmp/piCambot/a2.mp4')
+                try:
+                    shutil.move('/tmp/piCamBot/video/tmp4/a2.mp4', '/tmp/piCambot/a2.mp4')
+                except Exception as e:
+                    print(e)
+                    pass
                 ffmpegHasFinished = False
                 if self.isPictureMoved:
                     dest = '/tmp/piCamBot/video/tmp'  # where ffmpeg grabs da jpgs
