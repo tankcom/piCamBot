@@ -795,6 +795,7 @@ class piCamBot:
             ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
             if ffmpegHasFinished:
                 self.ffmpegrunning = False
+                time.sleep(3)
                 movefile = os.listdir('/tmp/piCamBot/video/tmp4/')
                 if movefile:
                     try:
