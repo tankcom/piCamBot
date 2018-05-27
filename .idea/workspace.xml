@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="799" column="93" selection-start-line="799" selection-start-column="93" selection-end-line="799" selection-end-column="93" />
+            <state relative-caret-position="476">
+              <caret line="791" column="24" selection-start-line="791" selection-start-column="24" selection-end-line="791" selection-end-column="24" />
               <folding>
                 <element signature="e#356#372#0" expanded="true" />
               </folding>
@@ -151,13 +151,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524731395285</updated>
-    </task>
-    <task id="LOCAL-00001" summary="try stuff to fix auto arming">
-      <created>1525594240880</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1525594240880</updated>
     </task>
     <task id="LOCAL-00002" summary="Auto Loopback added to more commands">
       <created>1525595004329</created>
@@ -488,7 +481,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527446648022</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="changed the way videos are created">
+      <created>1527446719731</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1527446719731</updated>
+    </task>
+    <task id="LOCAL-00050" summary="changed the way videos are created">
+      <created>1527446976166</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1527446976168</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -601,8 +608,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="799" column="93" selection-start-line="799" selection-start-column="93" selection-end-line="799" selection-end-column="93" />
+        <state relative-caret-position="476">
+          <caret line="791" column="24" selection-start-line="791" selection-start-column="24" selection-end-line="791" selection-end-column="24" />
           <folding>
             <element signature="e#356#372#0" expanded="true" />
           </folding>

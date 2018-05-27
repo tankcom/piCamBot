@@ -789,6 +789,7 @@ class piCamBot:
                 except Exception as e:
                     print(e)
                     pass
+            time.sleep(2)
             ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
             if ffmpegHasFinished:
                 self.ffmpegrunning = False
