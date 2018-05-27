@@ -795,11 +795,13 @@ class piCamBot:
             ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
             if ffmpegHasFinished:
                 self.ffmpegrunning = False
-                try:
-                    shutil.move('/tmp/piCamBot/video/tmp4/a2.mp4', '/tmp/piCamBot/')
-                except Exception as e:
-                    print(e)
-                    pass
+                movefile = os.listdir('/tmp/piCamBot/video/tmp4/')
+                if movefile:
+                    try:
+                        shutil.move('/tmp/piCamBot/video/tmp4/a2.mp4', '/tmp/piCamBot/')
+                    except Exception as e:
+                        print(e)
+                        pass
                 ffmpegHasFinished = False # if the file a2.mp4 exists ffmpeg must be finished
                 if self.isPictureMoved:
                     dest = '/tmp/piCamBot/video/tmp'  # where ffmpeg grabs da jpgs
