@@ -769,7 +769,8 @@ class piCamBot:
         while True:
             time.sleep(1)
             isNotEmpty = os.listdir('/tmp/piCamBot/video/data')
-            time.sleep(10)
+            if isNotEmpty:
+                time.sleep(10)
             if not self.isPictureMoved and isNotEmpty: # only execute if ffmpeg is ready and there are pictures to move
 
                 source = '/tmp/piCamBot/video/data' # where motion puts da jpgs

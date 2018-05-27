@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="796" column="84" lean-forward="true" selection-start-line="796" selection-start-column="84" selection-end-line="796" selection-end-column="84" />
+            <state relative-caret-position="361">
+              <caret line="772" column="20" selection-start-line="772" selection-start-column="20" selection-end-line="772" selection-end-column="20" />
               <folding>
                 <element signature="e#356#372#0" expanded="true" />
               </folding>
@@ -39,7 +39,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>check for image</find>
+      <find />
       <find>/capture</find>
       <find>Video</find>
       <find>thread</find>
@@ -48,7 +48,7 @@
       <find>tmp</find>
       <find>commands</find>
       <find>commands.</find>
-      <find>While True</find>
+      <find />
       <find>watchpir</find>
     </findStrings>
   </component>
@@ -74,8 +74,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="155" />
-    <option name="y" value="80" />
+    <option name="x" value="182" />
+    <option name="y" value="129" />
     <option name="width" value="1729" />
     <option name="height" value="903" />
   </component>
@@ -151,20 +151,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524731395285</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Added automatically disabling motion after disabling Loopback">
-      <created>1525595884702</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1525595884702</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Fixed Status Command">
-      <created>1525596132160</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1525596132160</updated>
     </task>
     <task id="LOCAL-00006" summary="Fixed Status Command">
       <created>1525596613347</created>
@@ -495,11 +481,25 @@
       <option name="project" value="LOCAL" />
       <updated>1527447687261</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="changed the way videos are created">
+      <created>1527448053037</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1527448053037</updated>
+    </task>
+    <task id="LOCAL-00054" summary="fixed timing of video creation">
+      <created>1527448410038</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1527448410038</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="155" y="80" width="1729" height="903" extended-state="0" />
+    <frame x="328" y="129" width="1729" height="903" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49457178" visible="true" weight="0.14632736" />
@@ -543,7 +543,8 @@
     <MESSAGE value="risky stuff" />
     <MESSAGE value="bad practice" />
     <MESSAGE value="changed the way videos are created" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed the way videos are created" />
+    <MESSAGE value="fixed timing of video creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed timing of video creation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -608,8 +609,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="796" column="84" lean-forward="true" selection-start-line="796" selection-start-column="84" selection-end-line="796" selection-end-column="84" />
+        <state relative-caret-position="361">
+          <caret line="772" column="20" selection-start-line="772" selection-start-column="20" selection-end-line="772" selection-end-column="20" />
           <folding>
             <element signature="e#356#372#0" expanded="true" />
           </folding>
