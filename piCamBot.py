@@ -56,6 +56,8 @@ class piCamBot:
         self.IsNginxRunning = None
         # set variable for pid of nginx
         self.pidNginx = None
+        #set variable to check if picture has been moved
+        self.isPictureMoved = None
 
     def run(self):
         # setup logging, we want to log both to stdout and a file
