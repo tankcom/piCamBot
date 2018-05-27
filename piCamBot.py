@@ -802,7 +802,7 @@ class piCamBot:
                     dest = '/tmp/piCamBot/video/tmp'  # where ffmpeg grabs da jpgs
                     files2 = os.listdir(dest)
                     for f in files2:
-                        os.remove(f)
+                        os.remove('/tmp/piCamBot/video/tmp/' + f)
                     self.isPictureMoved = False
 
 
