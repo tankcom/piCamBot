@@ -760,33 +760,61 @@ class piCamBot:
         #gpio = self.config['pir']['gpio']
         #self.GPIO.setmode(self.GPIO.BOARD)
         #self.GPIO.setup(gpio, self.GPIO.IN)
+        os.makedirs('/tmp/piCamBot/video/tmp')
+        os.makedirs('/tmp/piCamBot/video/tmp4')
         while True:
+            isNotEmpty = os.listdir('/tmp/piCamBot/video/data')
+            if not self.isPictureMoved and isNotEmpty: # only execute if ffmpeg is ready and there are pictures to move
+
+                source = '/tmp/piCamBot/video/data' # where motion puts da jpgs
+                dest = '/tmp/piCamBot/video/tmp' # where ffmpeg grabs da jpgs
+
+                files = os.listdir(source) # make list of all jpegs in direcory
+
+                for f in files:                 #move every file to dest
+                    if (f.endswith(".jpg"))
+                        shutil.move(f, dest)
+                self.isPictureMoved = True
+            isNotEmpty2 = os.listdir('/tmp/piCamBot/video/tmp')
+            if self.isPictureMoved and isNotEmpty2: #only execute if pictures have been moved and the input folder is not empty
+                args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/data/*jpg | sed 's/^/file /') -vf format=yuv420p -c copy /tmp/piCamBot/video/tmp4/a2.mp4"]
+                try:
+                    subprocess.Popen(args)
+                    print('LELELELELELELELEL')
+                except Exception as e:
+                    print(e)
+                    pass
+            ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
+            if ffmpegHasFinished:
+                shutil.move('/tmp/piCamBot/video/tmp4/a2.mp4', '/tmp/piCambot/a2.mp4')
+                ffmpegHasFinished = False
+                if self.isPictureMoved:
+                    dest = '/tmp/piCamBot/video/tmp'  # where ffmpeg grabs da jpgs
+                    files2 = os.listdir(dest)
+                    for f in files2:
+                        os.remove(f)
+                    self.isPictureMoved = False
+
+
             args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/data/*jpg | sed 's/^/file /') -vf format=yuv420p -c copy /tmp/piCamBot/a2.mp4"]
             # args = ['echo' 'kek']
-            try:
-                subprocess.Popen(args)
-                time.sleep(10)
-                print('LELELELELELELELEL')
-            except Exception as e:
-                print(e)
-                print(e)
-                print(e)
-                print(e)
-                print(e)
-                print(e)
-                print(e)
-                print(e)
-                pass
-            try:
-                shutil.rmtree('/tmp/piCamBot/video/data', ignore_errors=True)
-            except Exception as e:
-                print(e)
-                print ('PPPPPPPPPPPPPPPPPPPPPPPPPPPPPP')
-            try:
-                os.makedirs('/tmp/piCamBot/video/data')
-            except Exception as e:
-                print(e)
-                print('AAAaaaasssAAAAAAAAAAAAAAAAAAA')
+            #try:
+            #    subprocess.Popen(args)
+            #    time.sleep(10)
+            #    print('LELELELELELELELEL')
+            #except Exception as e:
+            #    print(e)
+            #    pass
+            #try:
+            #    shutil.rmtree('/tmp/piCamBot/video/data', ignore_errors=True)
+            #except Exception as e:
+            #    print(e)
+            #    print ('PPPPPPPPPPPPPPPPPPPPPPPPPPPPPP')
+            #try:
+            #    os.makedirs('/tmp/piCamBot/video/data')
+            #except Exception as e:
+            #    print(e)
+            #    print('AAAaaaasssA')
     def playSequence(self, sequence):
         gpio = self.config['buzzer']['gpio']
         duration = self.config['buzzer']['duration']
