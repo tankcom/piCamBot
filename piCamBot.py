@@ -780,8 +780,8 @@ class piCamBot:
                         shutil.move("/tmp/piCamBot/video/data/" + f, dest)
                 self.isPictureMoved = True
             isNotEmpty2 = os.listdir('/tmp/piCamBot/video/tmp')
-            if self.isPictureMoved and isNotEmpty2 and not self.ffmpegrunning: #only execute if pictures have been moved and the input folder is not empty
-                self.ffmpegrunning = True
+            if self.isPictureMoved and isNotEmpty2 and not self.ffmpegrunning: #only execute if pictures have been moved and the input folder is not empty and ffmpeg is not currently running
+                self.ffmpegrunning = True # tell if ffmpeg is started
                 args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/tmp/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx /tmp/piCamBot/video/tmp4/a2.mp4"]
                 try:
                     subprocess.Popen(args)
@@ -797,7 +797,7 @@ class piCamBot:
                 except Exception as e:
                     print(e)
                     pass
-                ffmpegHasFinished = False
+                ffmpegHasFinished = False # if the file a2.mp4 exists ffmpeg must be finished
                 if self.isPictureMoved:
                     dest = '/tmp/piCamBot/video/tmp'  # where ffmpeg grabs da jpgs
                     files2 = os.listdir(dest)
