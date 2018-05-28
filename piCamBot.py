@@ -821,12 +821,10 @@ class piCamBot:
                 except Exception as e:
                     print(e)
                     pass
-            try:
-                ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
-                time.sleep(1)
-            except Exception as e:
-                print(e)
-                pass
+
+            ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
+            time.sleep(1)
+
             if ffmpegHasFinished:
                 self.ffmpegrunning = False
                 time.sleep(1)
@@ -849,8 +847,8 @@ class piCamBot:
                         #for f in files2:
                         #    os.remove('/tmp/piCamBot/video/tmp/' + f)
                         self.isPictureNotDeleted = os.listdir('/tmp/piCamBot/video/tmp')
-                        if not self.isPictureNotDeleted:
-                            self.isPictureMoved = False
+                        #if not self.isPictureNotDeleted:
+                        self.isPictureMoved = False
                         #self.isPictureMoved = False
                         ffmpegHasFinished = False  # if the file a2.mp4 exists ffmpeg must be finished
                         time.sleep(1)
