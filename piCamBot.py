@@ -744,6 +744,7 @@ class piCamBot:
             # always delete image, even if reporting is disabled
             if self.config['general']['delete_images']:
                 try:
+                    time.sleep(1)
                     os.remove(filepath)
                 except Exception as e:
                     print(e)
@@ -788,7 +789,7 @@ class piCamBot:
                 print(e)
                 pass
             if isNotEmpty:
-                time.sleep(10)
+                time.sleep(6)
             if not self.isPictureMoved and isNotEmpty: # only execute if ffmpeg is ready and there are pictures to move
 
                 source = '/tmp/piCamBot/video/data' # where motion puts da jpgs
@@ -821,6 +822,7 @@ class piCamBot:
                     pass
             try:
                 ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
+                time.sleep(5)
             except Exception as e:
                 print(e)
                 pass
