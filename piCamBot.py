@@ -808,7 +808,7 @@ class piCamBot:
                 pass
             if self.isPictureMoved and isNotEmpty2 and not self.ffmpegrunning: #only execute if pictures have been moved and the input folder is not empty and ffmpeg is not currently running
                 self.ffmpegrunning = True # tell if ffmpeg is started
-                args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/tmp/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx -b:v 2000k /tmp/piCamBot/video/tmp4/a2.mp4"]
+                args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 30 -i <(ls -d -1 /tmp/piCamBot/video/tmp/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx -b:v 2000k /tmp/piCamBot/video/tmp4/a2.mp4"]
                 try:
                     subprocess.Popen(args)
                     print('ffmpeg starting up')
