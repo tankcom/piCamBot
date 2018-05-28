@@ -741,7 +741,11 @@ class piCamBot:
                         self.logger.warn('Could not send image to user %s: %s' % (owner_id, str(e)))
             # always delete image, even if reporting is disabled
             if self.config['general']['delete_images']:
-                os.remove(filepath)
+                try:
+                    os.remove(filepath)
+                except Exception as e:
+                    print(e)
+                    pass
 
     def getMotionPID(self):
         pid_file = self.config['motion']['pid_file']
