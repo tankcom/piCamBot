@@ -782,14 +782,14 @@ class piCamBot:
         os.makedirs('/tmp/piCamBot/video/data')
         self.ffmpegrunning = False
         while True:
-            time.sleep(1)
+            time.sleep(0.01)
             try:
                 isNotEmpty = os.listdir('/tmp/piCamBot/video/data')
             except Exception as e:
                 print(e)
                 pass
             if isNotEmpty:
-                time.sleep(5)
+                time.sleep(3)
             if not self.isPictureMoved and isNotEmpty: # only execute if ffmpeg is ready and there are pictures to move
 
                 source = '/tmp/piCamBot/video/data' # where motion puts da jpgs
@@ -822,13 +822,13 @@ class piCamBot:
                     pass
             try:
                 ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
-                time.sleep(5)
+                time.sleep(4)
             except Exception as e:
                 print(e)
                 pass
             if ffmpegHasFinished:
                 self.ffmpegrunning = False
-                time.sleep(4)
+                time.sleep(2)
                 try:
                     movefile = os.listdir('/tmp/piCamBot/video/tmp4/')
                 except Exception as e:
