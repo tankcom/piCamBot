@@ -361,7 +361,7 @@ class piCamBot:
             return
         self.commandIsNginxRunningLite()
         if self.IsNginxRunning: #check if nginx is running, if yes, ffmpeg can stream to rtmp, if not, it would crash.
-            args = ['ffmpeg', '-video_size', '1280x720',  '-i', '/dev/video0', '-vcodec', 'rawvideo', '-f', 'v4l2', '/dev/video1', '-vcodec',
+            args = ['ffmpeg', '-video_size', '1280x720',  '-r', '20', '-framerate', '20', '-i', '/dev/video0', '-vcodec', 'rawvideo', '-f', 'v4l2', '/dev/video1', '-vcodec',
                     'rawvideo', '-f', 'v4l2', '/dev/video3', '-vf',
                     "drawtext=fontfile=/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf: text='%{localtime\:%T}%{n}': fontcolor=white@0.8: x=7: y=700",
                     '-f', 'flv', '-vcodec', 'h264_omx', '-f', 'flv', '-b:v', '2000k', 'rtmp://localhost:1935/hls/stream']  # hardcoded stream address, may be bad.
@@ -369,7 +369,7 @@ class piCamBot:
                 # it also streams hardware encoded h264 to rtmp://localhost:1935/hls/stream, where nginx needs to be listening before starting up
                 # ffmpeg needs to be compiled with h264_omx support, nginx needs to be compiled with the rtmp streamer module.
         else: # if nginx is not running, start ffmpeg without livestreaming, and only with motion and manual capture capabilities
-            args = ['ffmpeg', '-video_size', '1280x720', '-i', '/dev/video0', '-vcodec', 'rawvideo', '-f', 'v4l2',
+            args = ['ffmpeg', '-video_size', '1280x720', '-r', '20', '-framerate', '20', '-i', '/dev/video0', '-vcodec', 'rawvideo', '-f', 'v4l2',
                     '/dev/video1', '-vcodec',
                     'rawvideo', '-f', 'v4l2', '/dev/video3', '-vf',
                     "drawtext=fontfile=/usr/share/fonts/dejavu/DejaVuSans-Bold.ttf: text='%{localtime\:%T}%{n}': fontcolor=white@0.8: x=7: y=700"]
