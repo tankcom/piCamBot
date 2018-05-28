@@ -846,9 +846,11 @@ class piCamBot:
                         for f in files2:
                             os.remove('/tmp/piCamBot/video/tmp/' + f)
                         self.isPictureMoved = False
+                        time.sleep(1)
                     except Exception as e:
                         print(e)
                         pass
+
 
 
             args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/data/*jpg | sed 's/^/file /') -vf format=yuv420p -c copy /tmp/piCamBot/a2.mp4"]
