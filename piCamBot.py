@@ -806,7 +806,7 @@ class piCamBot:
                             print(e)
                             pass
                 self.isPictureMoved = True
-                time.sleep(2)
+                time.sleep(4)
             try:
                 isNotEmpty2 = os.listdir('/tmp/piCamBot/video/tmp')
             except Exception as e:
