@@ -70,6 +70,12 @@ class piCamBot:
         stdoutHandler.setFormatter(logFormat)
         self.logger.addHandler(stdoutHandler)
         self.logger.setLevel(logging.INFO)
+        try:
+            subprocess.Popen(['sudo', 'killall', '-9', 'motion'])
+        except Exception as e:
+            print(e)
+            pass
+
 
         self.logger.info('Starting')
 
@@ -788,7 +794,7 @@ class piCamBot:
                 args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/tmp/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx /tmp/piCamBot/video/tmp4/a2.mp4"]
                 try:
                     subprocess.Popen(args)
-                    print('LELELELELELELELEL')
+                    print('ffmpeg starting up')
                 except Exception as e:
                     print(e)
                     pass
