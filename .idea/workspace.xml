@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="007137af-dfce-4299-8912-06e5ee02ceb4" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/piCamBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/piCamBot.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="808" column="28" selection-start-line="808" selection-start-column="28" selection-end-line="808" selection-end-column="28" />
+            <state relative-caret-position="370">
+              <caret line="816" column="63" selection-start-line="816" selection-start-column="63" selection-end-line="816" selection-end-column="63" />
               <folding>
                 <element signature="e#356#372#0" expanded="true" />
               </folding>
@@ -162,27 +163,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524731395285</updated>
-    </task>
-    <task id="LOCAL-00033" summary="bad practice">
-      <created>1527370569308</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1527370569308</updated>
-    </task>
-    <task id="LOCAL-00034" summary="bad practice">
-      <created>1527370822465</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1527370822465</updated>
-    </task>
-    <task id="LOCAL-00035" summary="bad practice">
-      <created>1527371118885</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1527371118885</updated>
     </task>
     <task id="LOCAL-00036" summary="bad practice">
       <created>1527371375073</created>
@@ -506,20 +486,41 @@
       <option name="project" value="LOCAL" />
       <updated>1527537690928</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="fixed typo">
+      <created>1527538087711</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1527538087711</updated>
+    </task>
+    <task id="LOCAL-00083" summary="fixed typo">
+      <created>1527538135732</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1527538135732</updated>
+    </task>
+    <task id="LOCAL-00084" summary="fixed typo">
+      <created>1527538313438</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1527538313438</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1011" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49199572" visible="true" weight="0.13177083" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49258837" visible="true" weight="0.13177083" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32976654" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32810616" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.06403415" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.50800425" side_tool="true" visible="true" weight="0.13177083" />
+      <window_info id="Structure" order="1" sideWeight="0.50741166" side_tool="true" visible="true" weight="0.13177083" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -662,8 +663,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="808" column="28" selection-start-line="808" selection-start-column="28" selection-end-line="808" selection-end-column="28" />
+        <state relative-caret-position="370">
+          <caret line="816" column="63" selection-start-line="816" selection-start-column="63" selection-end-line="816" selection-end-column="63" />
           <folding>
             <element signature="e#356#372#0" expanded="true" />
           </folding>
