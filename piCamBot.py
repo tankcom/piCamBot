@@ -784,11 +784,9 @@ class piCamBot:
         self.ffmpegrunning = False
         while True:
             time.sleep(0.01)
-            try:
-                isNotEmpty = os.listdir('/tmp/piCamBot/video/data')
-            except Exception as e:
-                print(e)
-                pass
+
+            isNotEmpty = os.listdir('/tmp/piCamBot/video/data')
+
             if isNotEmpty:
                 time.sleep(5)
             if not self.isPictureMoved and isNotEmpty: # only execute if ffmpeg is ready and there are pictures to move
@@ -822,10 +820,10 @@ class piCamBot:
                     print(e)
                     pass
 
-            ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
+            self.ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
             time.sleep(1)
 
-            if ffmpegHasFinished:
+            if self.ffmpegHasFinished:
                 self.ffmpegrunning = False
                 time.sleep(1)
                 try:
@@ -850,7 +848,7 @@ class piCamBot:
                         #if not self.isPictureNotDeleted:
                         self.isPictureMoved = False
                         #self.isPictureMoved = False
-                        ffmpegHasFinished = False  # if the file a2.mp4 exists ffmpeg must be finished
+                        self.ffmpegHasFinished = False  # if the file a2.mp4 exists ffmpeg must be finished
                         time.sleep(1)
                     except Exception as e:
                         print(e)
