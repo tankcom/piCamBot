@@ -789,7 +789,7 @@ class piCamBot:
                 print(e)
                 pass
             if isNotEmpty:
-                time.sleep(3)
+                time.sleep(0.01)
             if not self.isPictureMoved and isNotEmpty: # only execute if ffmpeg is ready and there are pictures to move
 
                 source = '/tmp/piCamBot/video/data' # where motion puts da jpgs
@@ -805,7 +805,7 @@ class piCamBot:
                             print(e)
                             pass
                 self.isPictureMoved = True
-                time.sleep(0.5)
+                time.sleep(0.1)
             try:
                 isNotEmpty2 = os.listdir('/tmp/piCamBot/video/tmp')
             except Exception as e:
@@ -813,7 +813,7 @@ class piCamBot:
                 pass
             if self.isPictureMoved and isNotEmpty2 and not self.ffmpegrunning: #only execute if pictures have been moved and the input folder is not empty and ffmpeg is not currently running
                 self.ffmpegrunning = True # tell if ffmpeg is started
-                args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 10 -i <(ls -d -1 /tmp/piCamBot/video/tmp/*.jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx -b:v 2000k /tmp/piCamBot/video/tmp4/a2.mp4 && rm /tmp/piCamBot/video/tmp/*.jpg"]
+                args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 10 -i <(ls -d -1 /tmp/piCamBot/video/tmp/*.jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx -b:v 800k /tmp/piCamBot/video/tmp4/a2.mp4 && rm /tmp/piCamBot/video/tmp/*.jpg"]
                 try:
                     subprocess.Popen(args)
                     print('ffmpeg starting up')
@@ -822,13 +822,13 @@ class piCamBot:
                     pass
             try:
                 ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
-                time.sleep(4)
+                time.sleep(0.4)
             except Exception as e:
                 print(e)
                 pass
             if ffmpegHasFinished:
                 self.ffmpegrunning = False
-                time.sleep(2)
+                time.sleep(0.2)
                 try:
                     movefile = os.listdir('/tmp/piCamBot/video/tmp4/')
                 except Exception as e:
