@@ -218,10 +218,12 @@ class piCamBot:
                     self.performCommand(message)
             except NetworkError as e:
                 time.sleep(1)
+                pass
             except Exception as e:
                 self.logger.warn(str(e))
                 self.logger.warn(traceback.format_exc())
                 time.sleep(1)
+                pass
 
     def performCommand(self, message):
         cmd = message.text.lower().rstrip()
@@ -774,7 +776,11 @@ class piCamBot:
         self.ffmpegrunning = False
         while True:
             time.sleep(1)
-            isNotEmpty = os.listdir('/tmp/piCamBot/video/data')
+            try:
+                isNotEmpty = os.listdir('/tmp/piCamBot/video/data')
+            except Exception as e:
+                print(e)
+                pass
             if isNotEmpty:
                 time.sleep(10)
             if not self.isPictureMoved and isNotEmpty: # only execute if ffmpeg is ready and there are pictures to move
@@ -786,9 +792,16 @@ class piCamBot:
 
                 for f in files:                 #move every file to dest
                     if (f.endswith(".jpg")):
-                        shutil.move("/tmp/piCamBot/video/data/" + f, dest)
+                        try:
+                            shutil.move("/tmp/piCamBot/video/data/" + f, dest)
+                        except Exception as e:
+                            print(e)
+                            pass
                 self.isPictureMoved = True
-            isNotEmpty2 = os.listdir('/tmp/piCamBot/video/tmp')
+            try:
+                isNotEmpty2 = os.listdir('/tmp/piCamBot/video/tmp')
+            except Exception:
+                pass
             if self.isPictureMoved and isNotEmpty2 and not self.ffmpegrunning: #only execute if pictures have been moved and the input folder is not empty and ffmpeg is not currently running
                 self.ffmpegrunning = True # tell if ffmpeg is started
                 args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/tmp/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx -b:v 2000k /tmp/piCamBot/video/tmp4/a2.mp4"]
@@ -798,11 +811,19 @@ class piCamBot:
                 except Exception as e:
                     print(e)
                     pass
-            ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
+            try:
+                ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
+            except Exception as e:
+                print(e)
+                pass
             if ffmpegHasFinished:
                 self.ffmpegrunning = False
                 time.sleep(4)
-                movefile = os.listdir('/tmp/piCamBot/video/tmp4/')
+                try:
+                    movefile = os.listdir('/tmp/piCamBot/video/tmp4/')
+                except Exception as e:
+                    print(e)
+                    pass
                 if movefile:
                     try:
                         shutil.move('/tmp/piCamBot/video/tmp4/a2.mp4', '/tmp/piCamBot/')
@@ -812,10 +833,14 @@ class piCamBot:
                 ffmpegHasFinished = False # if the file a2.mp4 exists ffmpeg must be finished
                 if self.isPictureMoved:
                     dest = '/tmp/piCamBot/video/tmp'  # where ffmpeg grabs da jpgs
-                    files2 = os.listdir(dest)
-                    for f in files2:
-                        os.remove('/tmp/piCamBot/video/tmp/' + f)
-                    self.isPictureMoved = False
+                    try:
+                        files2 = os.listdir(dest)
+                        for f in files2:
+                            os.remove('/tmp/piCamBot/video/tmp/' + f)
+                        self.isPictureMoved = False
+                    except Exception as e:
+                        print(e)
+                        pass
 
 
             args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 20 -i <(ls -d -1 /tmp/piCamBot/video/data/*jpg | sed 's/^/file /') -vf format=yuv420p -c copy /tmp/piCamBot/a2.mp4"]
