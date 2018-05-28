@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="816" column="134" selection-start-line="816" selection-start-column="134" selection-end-line="816" selection-end-column="134" />
+            <state relative-caret-position="268">
+              <caret line="729" column="53" selection-start-line="729" selection-start-column="48" selection-end-line="729" selection-end-column="53" />
               <folding>
                 <element signature="e#356#372#0" expanded="true" />
               </folding>
@@ -63,6 +63,7 @@
       <find>print</find>
       <find>30</find>
       <find>qualit</find>
+      <find>mjpeg</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -163,20 +164,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524731395285</updated>
-    </task>
-    <task id="LOCAL-00040" summary="bad practice">
-      <created>1527372671557</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1527372671557</updated>
-    </task>
-    <task id="LOCAL-00041" summary="changed the way videos are created">
-      <created>1527444491712</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1527444491712</updated>
     </task>
     <task id="LOCAL-00042" summary="changed the way videos are created">
       <created>1527444561003</created>
@@ -507,7 +494,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527540016013</updated>
     </task>
-    <option name="localTasksCounter" value="89" />
+    <task id="LOCAL-00089" summary="fixed typo">
+      <created>1527540137184</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1527540137184</updated>
+    </task>
+    <task id="LOCAL-00090" summary="fixed typo">
+      <created>1527540746367</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1527540746367</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -663,8 +664,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="816" column="134" selection-start-line="816" selection-start-column="134" selection-end-line="816" selection-end-column="134" />
+        <state relative-caret-position="268">
+          <caret line="729" column="53" selection-start-line="729" selection-start-column="48" selection-end-line="729" selection-end-column="53" />
           <folding>
             <element signature="e#356#372#0" expanded="true" />
           </folding>
