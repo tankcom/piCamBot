@@ -733,6 +733,7 @@ class piCamBot:
                 continue
             self.logger.info('New image file: "%s"' % filepath)
             if self.armed:
+                time.sleep(2)
                 for owner_id in self.config['telegram']['owner_ids']:
                     try:
                         self.bot.sendVideo(chat_id=owner_id, caption=filepath, video=open(filepath, 'rb'))
