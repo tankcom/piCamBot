@@ -839,6 +839,7 @@ class piCamBot:
                         print(e)
                         pass
                 ffmpegHasFinished = False # if the file a2.mp4 exists ffmpeg must be finished
+                time.sleep(1)
                 if self.isPictureMoved:
                     dest = '/tmp/piCamBot/video/tmp'  # where ffmpeg grabs da jpgs
                     try:
