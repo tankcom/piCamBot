@@ -789,7 +789,7 @@ class piCamBot:
                 print(e)
                 pass
             if isNotEmpty:
-                time.sleep(6)
+                time.sleep(10)
             if not self.isPictureMoved and isNotEmpty: # only execute if ffmpeg is ready and there are pictures to move
 
                 source = '/tmp/piCamBot/video/data' # where motion puts da jpgs
