@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10">
-              <caret line="761" column="8" selection-start-line="761" selection-start-column="8" selection-end-line="761" selection-end-column="8" />
+            <state relative-caret-position="312">
+              <caret line="793" column="175" selection-start-line="793" selection-start-column="175" selection-end-line="793" selection-end-column="175" />
               <folding>
                 <element signature="e#356#372#0" expanded="true" />
               </folding>
@@ -150,20 +150,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524731395285</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Fixed Typo">
-      <created>1525597144230</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1525597144230</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Fixed Typo">
-      <created>1525597434014</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1525597434014</updated>
     </task>
     <task id="LOCAL-00011" summary="added auto arming">
       <created>1527352325062</created>
@@ -494,11 +480,26 @@
       <option name="project" value="LOCAL" />
       <updated>1527449968830</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="fixed timing of video creation">
+      <created>1527496906230</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1527496906231</updated>
+    </task>
+    <task id="LOCAL-00059" summary="changed bitrate of motion video">
+      <created>1527497305429</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1527497305429</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="731" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49315068" visible="true" weight="0.19765624" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -542,7 +543,8 @@
     <MESSAGE value="bad practice" />
     <MESSAGE value="changed the way videos are created" />
     <MESSAGE value="fixed timing of video creation" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed timing of video creation" />
+    <MESSAGE value="changed bitrate of motion video" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed bitrate of motion video" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -624,8 +626,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10">
-          <caret line="761" column="8" selection-start-line="761" selection-start-column="8" selection-end-line="761" selection-end-column="8" />
+        <state relative-caret-position="312">
+          <caret line="793" column="175" selection-start-line="793" selection-start-column="175" selection-end-line="793" selection-end-column="175" />
           <folding>
             <element signature="e#356#372#0" expanded="true" />
           </folding>
