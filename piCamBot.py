@@ -823,13 +823,13 @@ class piCamBot:
                     pass
             try:
                 ffmpegHasFinished = os.listdir('/tmp/piCamBot/video/tmp4') #check if movie creation by ffmpeg is finished
-                time.sleep(0.4)
+                time.sleep(1)
             except Exception as e:
                 print(e)
                 pass
             if ffmpegHasFinished:
                 self.ffmpegrunning = False
-                time.sleep(0.2)
+                time.sleep(1)
                 try:
                     movefile = os.listdir('/tmp/piCamBot/video/tmp4/')
                 except Exception as e:
