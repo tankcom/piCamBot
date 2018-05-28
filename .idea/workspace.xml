@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="850" column="24" selection-start-line="850" selection-start-column="24" selection-end-line="850" selection-end-column="24" />
+            <state relative-caret-position="406">
+              <caret line="812" column="34" selection-start-line="812" selection-start-column="34" selection-end-line="812" selection-end-column="34" />
               <folding>
                 <element signature="e#356#372#0" expanded="true" />
               </folding>
@@ -65,6 +65,7 @@
       <find>qualit</find>
       <find>mjpeg</find>
       <find>10</find>
+      <find>ffmpeghasf</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -165,20 +166,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524731395285</updated>
-    </task>
-    <task id="LOCAL-00044" summary="changed the way videos are created">
-      <created>1527445082470</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1527445082470</updated>
-    </task>
-    <task id="LOCAL-00045" summary="changed the way videos are created">
-      <created>1527445572004</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1527445572004</updated>
     </task>
     <task id="LOCAL-00046" summary="changed the way videos are created">
       <created>1527445711194</created>
@@ -509,20 +496,34 @@
       <option name="project" value="LOCAL" />
       <updated>1527541238503</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="fixed typo">
+      <created>1527541668186</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1527541668186</updated>
+    </task>
+    <task id="LOCAL-00094" summary="fixed typo">
+      <created>1527542166211</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1527542166211</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="1011" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49258837" visible="true" weight="0.13177083" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4925187" visible="true" weight="0.13177083" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32976654" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.06403415" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.14407684" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.06403415" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info id="Structure" order="1" sideWeight="0.50741166" side_tool="true" visible="true" weight="0.13177083" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5074813" side_tool="true" visible="true" weight="0.13177083" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -665,8 +666,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="850" column="24" selection-start-line="850" selection-start-column="24" selection-end-line="850" selection-end-column="24" />
+        <state relative-caret-position="406">
+          <caret line="812" column="34" selection-start-line="812" selection-start-column="34" selection-end-line="812" selection-end-column="34" />
           <folding>
             <element signature="e#356#372#0" expanded="true" />
           </folding>
