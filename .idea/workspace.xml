@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="389">
-              <caret line="879" column="41" lean-forward="true" selection-start-line="879" selection-start-column="41" selection-end-line="879" selection-end-column="41" />
+            <state relative-caret-position="455">
+              <caret line="848" column="102" selection-start-line="848" selection-start-column="102" selection-end-line="848" selection-end-column="102" />
               <folding>
                 <element signature="e#356#372#0" expanded="true" />
               </folding>
@@ -161,27 +161,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524731395285</updated>
-    </task>
-    <task id="LOCAL-00015" summary="video stuff">
-      <created>1527363319192</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1527363319192</updated>
-    </task>
-    <task id="LOCAL-00016" summary="video stuff">
-      <created>1527363413815</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1527363413815</updated>
-    </task>
-    <task id="LOCAL-00017" summary="risky stuff">
-      <created>1527366024118</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1527366024118</updated>
     </task>
     <task id="LOCAL-00018" summary="risky stuff">
       <created>1527366237430</created>
@@ -505,7 +484,28 @@
       <option name="project" value="LOCAL" />
       <updated>1527528368080</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="fixed typo">
+      <created>1527528918435</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1527528918436</updated>
+    </task>
+    <task id="LOCAL-00065" summary="fixed typo">
+      <created>1527529129325</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1527529129325</updated>
+    </task>
+    <task id="LOCAL-00066" summary="fixed typo">
+      <created>1527529181909</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1527529181909</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -661,8 +661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="879" column="41" lean-forward="true" selection-start-line="879" selection-start-column="41" selection-end-line="879" selection-end-column="41" />
+        <state relative-caret-position="455">
+          <caret line="848" column="102" selection-start-line="848" selection-start-column="102" selection-end-line="848" selection-end-column="102" />
           <folding>
             <element signature="e#356#372#0" expanded="true" />
           </folding>
