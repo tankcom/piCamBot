@@ -789,7 +789,7 @@ class piCamBot:
                 print(e)
                 pass
             if isNotEmpty:
-                time.sleep(10)
+                time.sleep(5)
             if not self.isPictureMoved and isNotEmpty: # only execute if ffmpeg is ready and there are pictures to move
 
                 source = '/tmp/piCamBot/video/data' # where motion puts da jpgs
@@ -813,7 +813,7 @@ class piCamBot:
                 pass
             if self.isPictureMoved and isNotEmpty2 and not self.ffmpegrunning: #only execute if pictures have been moved and the input folder is not empty and ffmpeg is not currently running
                 self.ffmpegrunning = True # tell if ffmpeg is started
-                args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 30 -i <(ls -d -1 /tmp/piCamBot/video/tmp/*.jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx -b:v 2000k /tmp/piCamBot/video/tmp4/a2.mp4 && rm /tmp/piCamBot/video/tmp/*.jpg"]
+                args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 10 -i <(ls -d -1 /tmp/piCamBot/video/tmp/*.jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx -b:v 2000k /tmp/piCamBot/video/tmp4/a2.mp4 && rm /tmp/piCamBot/video/tmp/*.jpg"]
                 try:
                     subprocess.Popen(args)
                     print('ffmpeg starting up')
@@ -828,7 +828,7 @@ class piCamBot:
                 pass
             if ffmpegHasFinished:
                 self.ffmpegrunning = False
-                time.sleep(10)
+                time.sleep(4)
                 try:
                     movefile = os.listdir('/tmp/piCamBot/video/tmp4/')
                 except Exception as e:
