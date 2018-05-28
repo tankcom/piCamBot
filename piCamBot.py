@@ -727,7 +727,7 @@ class piCamBot:
             filepath = ('%s/%s' % (watch_path, filename))
 
             if not filename.endswith('.jpg')\
-                    and not filename.endswith('.gif')\
+                    and not filename.endswith('.mjpeg')\
                     and not filename.endswith('.mp4'):
                 self.logger.info('New non-image file: "%s" - ignored' % filepath)
                 continue
@@ -814,7 +814,7 @@ class piCamBot:
                 pass
             if self.isPictureMoved and isNotEmpty2 and not self.ffmpegrunning: #only execute if pictures have been moved and the input folder is not empty and ffmpeg is not currently running
                 self.ffmpegrunning = True # tell if ffmpeg is started
-                args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 10 -i <(ls -d -1 /tmp/piCamBot/video/tmp/*.jpg | sed 's/^/file /') -c copy -b:v 800k /tmp/piCamBot/video/tmp4/a2.mp4; rm /tmp/piCamBot/video/tmp/*.jpg"]
+                args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 10 -i <(ls -d -1 /tmp/piCamBot/video/tmp/*.jpg | sed 's/^/file /') -c copy -b:v 800k /tmp/piCamBot/video/tmp4/a2.mjpeg; rm /tmp/piCamBot/video/tmp/*.jpg"]
                 try:
                     subprocess.Popen(args)
                     print('ffmpeg starting up')
@@ -837,7 +837,7 @@ class piCamBot:
                     pass
                 if movefile:
                     try:
-                        shutil.move('/tmp/piCamBot/video/tmp4/a2.mp4', '/tmp/piCamBot/')
+                        shutil.move('/tmp/piCamBot/video/tmp4/a2.mjpeg', '/tmp/piCamBot/')
                     except Exception as e:
                         print(e)
                         pass
