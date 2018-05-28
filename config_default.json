@@ -50,7 +50,7 @@
         "pid_file": "/tmp/motion/motion.pid",
 
         "//": "command for starting motion (always use option -b for daemon mode!)",
-        "cmd": "motion -b -c /home/pi/picambot/motion.conf",
+        "cmd": "motion -b -c /home/pi/piCamBot/motion.conf",
 
         "//": "process name to send SIGKILL to in case stopping by PID is not possible",
         "kill_name": "motion"
@@ -61,10 +61,10 @@
         "//": "command for creating a snapshot",
 	"//": "note: the resulting image should be located outside the usual image_dir,",
 	"//": "      otherwise it gets ignored while motion tracking is disabled",
-        "cmd": ""ffmpeg -i /dev/video3 -t 1 /tmp/piCamBot.jpg"",
+        "cmd": "ffmpeg -i /dev/video3 -t 1 /tmp/piCamBot.jpeg",
 
         "//": "where to find the image after capturing",
-        "file": "/tmp/piCamBot.jpg"
+        "file": "/tmp/piCamBot.jpeg"
     },
 
   "//": "settings for capturing Videos",
@@ -72,7 +72,7 @@
         "//": "command for creating a snapshot",
 	"//": "note: the resulting image should be located outside the usual image_dir,",
 	"//": "      otherwise it gets ignored while motion tracking is disabled",
-        "cmd": ""ffmpeg -i /dev/video3 -t {vid_len} -vcodec h264_omx -b:v 3000k /tmp/piCamBot.mp4"",
+        "cmd": "ffmpeg -i /dev/video3 -t {vid_len} -vcodec h264_omx -b:v 1800k /tmp/piCamBot.mp4",
 
         "//": "where to find the image after capturing",
         "file": "/tmp/piCamBot.mp4"
