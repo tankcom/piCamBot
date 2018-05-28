@@ -739,6 +739,8 @@ class piCamBot:
                     except Exception as e:
                         # most likely network problem or user has blocked the bot
                         self.logger.warn('Could not send image to user %s: %s' % (owner_id, str(e)))
+                        print(e)
+                        pass
             # always delete image, even if reporting is disabled
             if self.config['general']['delete_images']:
                 try:
@@ -802,13 +804,15 @@ class piCamBot:
                             print(e)
                             pass
                 self.isPictureMoved = True
+                time.sleep(0.5)
             try:
                 isNotEmpty2 = os.listdir('/tmp/piCamBot/video/tmp')
-            except Exception:
+            except Exception as e:
+                print(e)
                 pass
             if self.isPictureMoved and isNotEmpty2 and not self.ffmpegrunning: #only execute if pictures have been moved and the input folder is not empty and ffmpeg is not currently running
                 self.ffmpegrunning = True # tell if ffmpeg is started
-                args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 30 -i <(ls -d -1 /tmp/piCamBot/video/tmp/*jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx -b:v 2000k /tmp/piCamBot/video/tmp4/a2.mp4"]
+                args = ['bash', '-c', "ffmpeg -f concat -safe 0 -r 30 -i <(ls -d -1 /tmp/piCamBot/video/tmp/*.jpg | sed 's/^/file /') -vf format=yuv420p -c h264_omx -b:v 2000k /tmp/piCamBot/video/tmp4/a2.mp4"]
                 try:
                     subprocess.Popen(args)
                     print('ffmpeg starting up')
