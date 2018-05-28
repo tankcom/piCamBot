@@ -828,7 +828,7 @@ class piCamBot:
                 pass
             if ffmpegHasFinished:
                 self.ffmpegrunning = False
-                time.sleep(4)
+                time.sleep(10)
                 try:
                     movefile = os.listdir('/tmp/piCamBot/video/tmp4/')
                 except Exception as e:
