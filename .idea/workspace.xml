@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="007137af-dfce-4299-8912-06e5ee02ceb4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/piCamBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/piCamBot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/motion_default.conf" beforeDir="false" afterPath="$PROJECT_DIR$/motion_default.conf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,8 +17,8 @@
       <file leaf-file-name="piCamBot.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/piCamBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="812" column="34" selection-start-line="812" selection-start-column="34" selection-end-line="812" selection-end-column="34" />
+            <state relative-caret-position="1259">
+              <caret line="818" column="74" selection-start-line="818" selection-start-column="74" selection-end-line="818" selection-end-column="74" />
               <folding>
                 <element signature="e#356#372#0" expanded="true" />
               </folding>
@@ -29,8 +29,8 @@
       <file leaf-file-name="motion_default.conf" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/motion_default.conf">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="102" column="11" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
+            <state relative-caret-position="455">
+              <caret line="266" lean-forward="true" selection-start-line="266" selection-end-line="266" />
             </state>
           </provider>
         </entry>
@@ -38,8 +38,8 @@
       <file leaf-file-name="config_default.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config_default.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="75" selection-start-line="75" selection-end-line="75" />
+            <state relative-caret-position="360">
+              <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -75,8 +75,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/config_default.json" />
-        <option value="$PROJECT_DIR$/motion_default.conf" />
         <option value="$PROJECT_DIR$/piCamBot.py" />
+        <option value="$PROJECT_DIR$/motion_default.conf" />
       </list>
     </option>
   </component>
@@ -166,20 +166,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524731395285</updated>
-    </task>
-    <task id="LOCAL-00046" summary="changed the way videos are created">
-      <created>1527445711194</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1527445711194</updated>
-    </task>
-    <task id="LOCAL-00047" summary="changed the way videos are created">
-      <created>1527446130440</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1527446130440</updated>
     </task>
     <task id="LOCAL-00048" summary="changed the way videos are created">
       <created>1527446648022</created>
@@ -510,20 +496,34 @@
       <option name="project" value="LOCAL" />
       <updated>1527542166211</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="fixed typo">
+      <created>1527542799594</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1527542799594</updated>
+    </task>
+    <task id="LOCAL-00096" summary="fixed typo">
+      <created>1527543062001</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1527543062001</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1920" height="1011" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="731" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4925187" visible="true" weight="0.13177083" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49010655" visible="true" weight="0.19765624" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.14407684" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.20547946" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.06403415" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" id="Structure" order="1" sideWeight="0.5074813" side_tool="true" visible="true" weight="0.13177083" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.5098935" side_tool="true" visible="true" weight="0.19765624" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -569,6 +569,30 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/piCamBot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12270">
+          <caret line="818" column="74" selection-start-line="818" selection-start-column="74" selection-end-line="818" selection-end-column="74" />
+          <folding>
+            <element signature="e#356#372#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config_default.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1125">
+          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/motion_default.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="102" column="11" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11895">
@@ -650,24 +674,24 @@
     <entry file="file://$PROJECT_DIR$/piCamBot.py" />
     <entry file="file://$PROJECT_DIR$/config_default.json" />
     <entry file="file://$PROJECT_DIR$/motion_default.conf" />
-    <entry file="file://$PROJECT_DIR$/config_default.json">
+    <entry file="file://$PROJECT_DIR$/motion_default.conf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="75" selection-start-line="75" selection-end-line="75" />
+        <state relative-caret-position="455">
+          <caret line="266" lean-forward="true" selection-start-line="266" selection-end-line="266" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/motion_default.conf">
+    <entry file="file://$PROJECT_DIR$/config_default.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="102" column="11" selection-start-line="102" selection-start-column="11" selection-end-line="102" selection-end-column="11" />
+        <state relative-caret-position="360">
+          <caret line="24" column="40" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="40" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/piCamBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="812" column="34" selection-start-line="812" selection-start-column="34" selection-end-line="812" selection-end-column="34" />
+        <state relative-caret-position="1259">
+          <caret line="818" column="74" selection-start-line="818" selection-start-column="74" selection-end-line="818" selection-end-column="74" />
           <folding>
             <element signature="e#356#372#0" expanded="true" />
           </folding>
